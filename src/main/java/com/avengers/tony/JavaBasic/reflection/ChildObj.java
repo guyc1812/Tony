@@ -1,8 +1,5 @@
-package com.avengers.core.demo.JavaBasic.reflection;
+package com.avengers.tony.JavaBasic.reflection;
 
-/*****
- * Created by apple on 2017/12/10.
- */
 public class ChildObj extends RootObj{
 
     private String childfield1;

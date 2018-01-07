@@ -1,11 +1,8 @@
-package com.avengers.core.demo.JavaBasic.lock;
+package com.avengers.tony.JavaBasic.lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * Created by yucgu on 2017/11/24.
- */
 public class lock_Interruptibly extends Thread {
 
     Lock lock;

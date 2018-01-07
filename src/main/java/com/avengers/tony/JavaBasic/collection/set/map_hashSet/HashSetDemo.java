@@ -1,10 +1,7 @@
-package com.avengers.core.demo.JavaBasic.collection.set.map_hashSet;
+package com.avengers.tony.JavaBasic.collection.set.map_hashSet;
 
 import java.util.*;
 
-/*****
- * Created by apple on 2017/11/26.
- */
 public class HashSetDemo {
 
     public static void main(String[] args) {

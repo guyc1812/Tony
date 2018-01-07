@@ -1,10 +1,6 @@
-package com.avengers.core.demo.JavaBasic.collection.set.map_treeSet;
 
 import java.util.*;
 
-/*****
- * Created by apple on 2017/11/26.
- */
 public class TreeSetDemo {
 
     public static void main(String[] args) {

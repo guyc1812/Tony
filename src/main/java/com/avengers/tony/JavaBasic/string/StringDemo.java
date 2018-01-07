@@ -1,8 +1,5 @@
-package com.avengers.core.ZZZ.string;
+package com.avengers.tony.JavaBasic.string;
 
-/**
- * Created by yucgu on 2017/11/29.
- */
 public class StringDemo {
 
     public static void main(String[] args){

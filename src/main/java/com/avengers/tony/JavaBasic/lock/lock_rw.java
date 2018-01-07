@@ -1,10 +1,7 @@
-package com.avengers.core.demo.JavaBasic.lock;
+package com.avengers.tony.JavaBasic.lock;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/**
- * Created by yucgu on 2017/11/24.
- */
 public class lock_rw {
 
 

@@ -1,10 +1,7 @@
-package com.avengers.core.demo.JavaBasic.thread;
+package com.avengers.tony.JavaBasic.thread;
 
 import java.util.concurrent.Semaphore;
 
-/**
- * Created by yucgu on 2017/11/24.
- */
 public class multiThread_0 implements Runnable {
 
     private Semaphore semaphore;

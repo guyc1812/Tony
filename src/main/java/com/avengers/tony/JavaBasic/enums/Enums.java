@@ -1,12 +1,9 @@
-package com.avengers.core.ZZZ.enums;
+package com.avengers.tony.JavaBasic.enums;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by yucgu on 2017/11/30.
- */
 public class Enums {
 
     public static final Map<String, Boolean> FEATURE_FLAGS;

@@ -7,7 +7,7 @@ import java.net.UnknownHostException;
 
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan(basePackages = "com.avengers.tony")
+@ComponentScan(basePackages = "com")
 @PropertySource(value = {
         "classpath:application.properties",
         "classpath:server.properties",

@@ -1,5 +1,6 @@
-package com.avengers.core.demo.JavaBasic.comparator;
+package com.avengers.tony.JavaBasic.comparator;
 
+import com.avengers.tony.JavaBasic.comparator.Avenger;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;

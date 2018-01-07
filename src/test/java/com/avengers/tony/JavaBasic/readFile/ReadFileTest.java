@@ -1,6 +1,5 @@
 package com.avengers.tony.JavaBasic.readFile;
 
-import com.avengers.core.demo.JavaBasic.readFile.ReadFile;
 import org.junit.Test;
 
 public class ReadFileTest {

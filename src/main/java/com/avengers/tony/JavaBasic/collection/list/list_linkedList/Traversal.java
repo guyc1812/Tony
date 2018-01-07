@@ -1,4 +1,4 @@
-package com.avengers.core.demo.JavaBasic.collection.list.list_linkedList;
+package com.avengers.tony.JavaBasic.collection.list.list_linkedList;
 
 import java.util.Iterator;
 import java.util.LinkedList;

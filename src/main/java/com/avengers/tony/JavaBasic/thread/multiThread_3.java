@@ -1,4 +1,4 @@
-package com.avengers.core.demo.JavaBasic.thread;
+package com.avengers.tony.JavaBasic.thread;
 
 import java.util.HashSet;
 import java.util.List;
@@ -8,9 +8,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-/**
- * Created by yucgu on 2017/11/24.
- */
 public class multiThread_3 {
 
     ExecutorService executorService1 = Executors.newSingleThreadExecutor();

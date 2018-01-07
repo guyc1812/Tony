@@ -1,11 +1,8 @@
-package com.avengers.core.demo.JavaBasic.collection.list.list_linkedList;
+package com.avengers.tony.JavaBasic.collection.list.list_linkedList;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 
-/*****
- * Created by apple on 2017/11/26.
- */
 public class ListDemo {
 
     /**

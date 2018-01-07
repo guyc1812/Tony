@@ -1,13 +1,10 @@
-package com.avengers.core.demo.JavaBasic.collection.map.map_hashMap;
+package com.avengers.tony.JavaBasic.collection.map.map_hashMap;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/*****
- * Created by apple on 2017/11/26.
- */
 public class HashMapDemo {
 
     public static void main(String[] args) {

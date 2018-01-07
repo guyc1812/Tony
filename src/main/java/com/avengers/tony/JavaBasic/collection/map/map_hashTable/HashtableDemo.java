@@ -1,10 +1,7 @@
-package com.avengers.core.demo.JavaBasic.collection.map.map_hashTable;
+package com.avengers.tony.JavaBasic.collection.map.map_hashTable;
 
 import java.util.*;
 
-/*****
- * Created by apple on 2017/11/26.
- */
 public class HashtableDemo {
 
     public static void main(String[] args) {

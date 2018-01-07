@@ -1,13 +1,10 @@
-package com.avengers.core.demo.JavaBasic.stream;
+package com.avengers.tony.JavaBasic.stream;
 
 import com.google.common.collect.Lists;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-/*****
- * Created by apple on 2017/12/24.
- */
 public class Demo_Stream {
 
     public static void main(String[] args) {

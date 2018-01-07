@@ -1,4 +1,4 @@
-package com.avengers.core.demo.JavaBasic.comparator;
+package com.avengers.tony.JavaBasic.comparator;
 
 import lombok.*;
 

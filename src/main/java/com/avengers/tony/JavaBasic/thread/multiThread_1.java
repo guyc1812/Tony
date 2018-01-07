@@ -1,4 +1,4 @@
-package com.avengers.core.demo.JavaBasic.thread;
+package com.avengers.tony.JavaBasic.thread;
 
 import java.util.concurrent.Semaphore;
 

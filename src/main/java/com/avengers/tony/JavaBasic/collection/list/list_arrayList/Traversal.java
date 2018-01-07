@@ -1,12 +1,8 @@
-package com.avengers.core.demo.JavaBasic.collection.list.list_arrayList;
+package com.avengers.tony.JavaBasic.collection.list.list_arrayList;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 
-/*****
- * Created by apple on 2017/11/26.
- */
 public class Traversal {
 
     private static ArrayList getLinkedList(int num) {
@@ -24,7 +20,7 @@ public class Traversal {
             int i = iterator.next();
         }
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By Iterator：" + (end-start) + " ms");
+        System.out.println("Traversal By Iterator：" + (end - start) + " ms");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -33,16 +29,15 @@ public class Traversal {
     }
 
 
-
     /* 通过ForEach来遍历ArrayList */
     private static void traversalByForEach(ArrayList<Integer> list) {
         if (list == null) return;
         long start = System.currentTimeMillis();
-        for (Integer item : list){
+        for (Integer item : list) {
             int i = item;
         }
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By ForEach：" + (end-start) + " ms");
+        System.out.println("Traversal By ForEach：" + (end - start) + " ms");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -63,7 +58,7 @@ public class Traversal {
 //            }
         }
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By For：" + (end-start) + " ms");
+        System.out.println("Traversal By For：" + (end - start) + " ms");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -79,13 +74,13 @@ public class Traversal {
 
         long start = System.currentTimeMillis();
 
-        list.parallelStream().forEach(item->{
+        list.parallelStream().forEach(item -> {
             int i = item;
             n.add(item);
         });
 
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By Stream：" + (end-start) + " ms");
+        System.out.println("Traversal By Stream：" + (end - start) + " ms");
         System.out.println(n.get(10));
 
     }
@@ -130,21 +125,20 @@ public class Traversal {
 
         long start4 = System.currentTimeMillis();
         t7.stream()
-                .filter(p -> p%2 != 0)
+                .filter(p -> p % 2 != 0)
                 .forEach(n1::add);
         long end4 = System.currentTimeMillis();
-        System.out.println((end4-start4) + " ms");
+        System.out.println((end4 - start4) + " ms");
 
 
         long start5 = System.currentTimeMillis();
         for (Integer p : t8) {
-            if (p%2 != 0) {
+            if (p % 2 != 0) {
                 n2.add(p);
             }
         }
         long end5 = System.currentTimeMillis();
-        System.out.println((end5-start5) + " ms");
-
+        System.out.println((end5 - start5) + " ms");
 
 
     }

@@ -1,6 +1,6 @@
 package com.avengers.tony.JavaBasic.aspect;
 
-import com.avengers.core.BaseTest;
+import com.avengers.tony.BaseTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

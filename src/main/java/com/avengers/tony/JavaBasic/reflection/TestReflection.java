@@ -1,4 +1,5 @@
-package com.avengers.core.demo.JavaBasic.reflection;
+
+import com.avengers.tony.JavaBasic.reflection.ChildObj;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -6,9 +7,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.Class;
 
-/*****
- * Created by apple on 2017/12/10.
- */
 public class TestReflection {
 
     public static void main(String args[]) throws Exception {

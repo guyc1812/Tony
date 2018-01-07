@@ -1,7 +1,6 @@
-package com.avengers.core.demo.JavaBasic.collection.map.map_treeMap;
+package com.avengers.tony.JavaBasic.collection.map.map_treeMap;
 
 import java.util.*;
-
 
 public class TreeMapDemo  {
 
