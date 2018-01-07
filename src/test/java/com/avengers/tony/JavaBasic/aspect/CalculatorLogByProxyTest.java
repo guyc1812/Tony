@@ -1,5 +1,8 @@
 package com.avengers.tony.JavaBasic.aspect;
 
+import com.avengers.tony.JavaBasic.aspect.code.Calculator;
+import com.avengers.tony.JavaBasic.aspect.code.CalculatorImpl;
+import com.avengers.tony.JavaBasic.aspect.code.CalculatorLogByProxy;
 import org.junit.Test;
 
 public class CalculatorLogByProxyTest {
@@ -9,13 +12,12 @@ public class CalculatorLogByProxyTest {
 
         Calculator calculator = new CalculatorImpl();
 
-        calculator = new CalculatorLogByProxy(calculator).getLoggingProxy();
+        calculator = new CalculatorLogByProxy(calculator).CalcLoggingProxy();
 
-        int result = calculator.add(11, 12);
-        System.out.println("result:" + result);
+        int result1 = calculator.add(11, 12);
 
-        result = calculator.div(21, 3);
-        System.out.println("result:" + result);
+        int result2 = calculator.div(21, 0);
+
     }
 
 }
