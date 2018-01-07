@@ -127,9 +127,10 @@ The key unit of modularity in OOP is the class, whereas in AOP the unit of modul
                 //throw
                 System.out.println("The method " + methodName + " occurs exception:" + e);
                 throw new RuntimeException(e);
-            } 
-            //after
-            System.out.println("The method " + methodName + " ends");
+            }finally {
+                //after
+                System.out.println("The method " + methodName + " ends");
+            }
     
             return result;
         }
