@@ -1,8 +1,13 @@
 package com.avengers.tony.JavaBasic.collection.list.list_arrayList;
 
+import com.avengers.core.demo.JavaBasic.time.Timer;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/*****
+ * Created by apple on 2017/11/26.
+ */
 public class Traversal {
 
     private static ArrayList getLinkedList(int num) {
@@ -15,12 +20,15 @@ public class Traversal {
     private static void traversalByIterator(ArrayList<Integer> list) {
         if (list == null) return;
         long start = System.currentTimeMillis();
+
+        Timer.start();
         Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             int i = iterator.next();
         }
+        Timer.end();
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By Iterator：" + (end - start) + " ms");
+        System.out.println("Traversal By Iterator：" + (end-start) + " ms");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -29,15 +37,18 @@ public class Traversal {
     }
 
 
+
     /* 通过ForEach来遍历ArrayList */
     private static void traversalByForEach(ArrayList<Integer> list) {
         if (list == null) return;
         long start = System.currentTimeMillis();
-        for (Integer item : list) {
+        Timer.start();
+        for (Integer item : list){
             int i = item;
         }
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By ForEach：" + (end - start) + " ms");
+        Timer.end();
+        System.out.println("Traversal By ForEach：" + (end-start) + " ms");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -50,6 +61,7 @@ public class Traversal {
     private static void traversalByFor(ArrayList<Integer> list) {
         if (list == null) return;
         long start = System.currentTimeMillis();
+        Timer.start();
         int size = list.size();
         for (int i = 0; i < size; i++) {
             int j = list.get(i);
@@ -57,8 +69,9 @@ public class Traversal {
 //                list.remove(10);
 //            }
         }
+        Timer.end();
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By For：" + (end - start) + " ms");
+        System.out.println("Traversal By For：" + (end-start) + " ms");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -73,14 +86,14 @@ public class Traversal {
         ArrayList<Integer> n = new ArrayList(1000000);
 
         long start = System.currentTimeMillis();
-
-        list.parallelStream().forEach(item -> {
+        Timer.start();
+        list.parallelStream().forEach(item->{
             int i = item;
             n.add(item);
         });
-
+        Timer.end();
         long end = System.currentTimeMillis();
-        System.out.println("Traversal By Stream：" + (end - start) + " ms");
+        System.out.println("Traversal By Stream：" + (end-start) + " ms");
         System.out.println(n.get(10));
 
     }
@@ -124,21 +137,26 @@ public class Traversal {
         ArrayList<Integer> n2 = new ArrayList(1000000);
 
         long start4 = System.currentTimeMillis();
+        Timer.start();
         t7.stream()
-                .filter(p -> p % 2 != 0)
+                .filter(p -> p%2 != 0)
                 .forEach(n1::add);
+        Timer.end();
         long end4 = System.currentTimeMillis();
-        System.out.println((end4 - start4) + " ms");
+        System.out.println((end4-start4) + " ms");
 
 
         long start5 = System.currentTimeMillis();
+        Timer.start();
         for (Integer p : t8) {
-            if (p % 2 != 0) {
+            if (p%2 != 0) {
                 n2.add(p);
             }
         }
+        Timer.end();
         long end5 = System.currentTimeMillis();
-        System.out.println((end5 - start5) + " ms");
+        System.out.println((end5-start5) + " ms");
+
 
 
     }

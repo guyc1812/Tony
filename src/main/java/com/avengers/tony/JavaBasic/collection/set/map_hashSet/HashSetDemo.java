@@ -1,7 +1,11 @@
 package com.avengers.tony.JavaBasic.collection.set.map_hashSet;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
 
+/*****
+ * Created by apple on 2017/11/26.
+ */
 public class HashSetDemo {
 
     public static void main(String[] args) {

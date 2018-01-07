@@ -1,6 +1,11 @@
+package com.avengers.tony.JavaBasic.collection.set.map_treeSet;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.TreeSet;
 
+/*****
+ * Created by apple on 2017/11/26.
+ */
 public class TreeSetDemo {
 
     public static void main(String[] args) {

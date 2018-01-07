@@ -1,6 +1,8 @@
 package com.avengers.tony.JavaBasic.comparator;
 
 import com.avengers.tony.BaseTest;
+import com.avengers.tony.JavaBasic.comparator.code.Avenger;
+import com.avengers.tony.JavaBasic.comparator.code.MyComparator;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
