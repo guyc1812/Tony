@@ -14,6 +14,6 @@
 
 ![Spring AOP vs AspectJ](../../imgs/SpringAopVSAspectJ.png)
 
-# Reference
+### Reference
 
 [Comparing Spring AOP and AspectJ](http://www.baeldung.com/spring-aop-vs-aspectj)
