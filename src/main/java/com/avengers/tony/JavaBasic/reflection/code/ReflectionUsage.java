@@ -1,11 +1,9 @@
-
-import com.avengers.tony.JavaBasic.reflection.ChildObj;
+package com.avengers.tony.JavaBasic.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import java.lang.Class;
 
 public class TestReflection {
 
@@ -13,7 +11,7 @@ public class TestReflection {
 
 
         // access class
-        Class way1 = Class.forName("com.avengers.core.demo.JavaBasic.reflection.ChildObj");
+        Class way1 = Class.forName("com.avengers.tony.JavaBasic.reflection.ChildObj");
         Class way2 = ChildObj.class;
 
         ChildObj obj = new ChildObj();
@@ -29,7 +27,6 @@ public class TestReflection {
 
         // getName()
         System.out.println("Class name is " + way3.getName());
-
 
         // getConstructors()
         Constructor[] constructors = way3.getConstructors();
@@ -49,7 +46,6 @@ public class TestReflection {
         System.out.println("declaredConstructor(exact) name is " + declaredConstructor.getName());
         declaredConstructor.setAccessible(true);
         declaredConstructor.newInstance("a");
-
 
         // getMethods()
         Method[] methods = way3.getMethods();
@@ -74,10 +70,10 @@ public class TestReflection {
         sb.append(Modifier.toString(way3.getModifiers()) + " class " + way3.getSimpleName() +"{\n");
         Field[] fs = way3.getDeclaredFields();
         for(Field field:fs){
-            sb.append("\t");//空格
-            sb.append(Modifier.toString(field.getModifiers())+" ");//获得属性的修饰符，例如public，static等等
-            sb.append(field.getType().getSimpleName() + " ");//属性的类型的名字
-            sb.append(field.getName()+";\n");//属性的名字+回车
+            sb.append("\t");
+            sb.append(Modifier.toString(field.getModifiers())+" "); //获得属性的修饰符，例如public，static等等
+            sb.append(field.getType().getSimpleName() + " ");       //属性的类型的名字
+            sb.append(field.getName()+";\n");                       //属性的名字+回车
         }
         sb.append("}");
 

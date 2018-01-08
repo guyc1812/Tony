@@ -1,6 +1,7 @@
 # Collection Conversion
 
-## box
+
+### box
 
 ```
 int[] intArray = new int[]{1, 2, 3, 4, 5};
@@ -52,7 +53,8 @@ LinkedList<String> list5 = new LinkedList<>();
 Collections.addAll(list5, StrArray);
 ```
 
-## Array to Set
+
+### Array to Set
 
 ```
 Set<String>  set1 = new HashSet<>(Arrays.asList(StrArray));
@@ -65,7 +67,8 @@ Set<String>  set3 = new HashSet<>();
 Collections.addAll(set3, StrArray);
 ```
 
-## List/Set to Array
+
+### List/Set to Array
 
 ```
 //list to array
@@ -80,7 +83,8 @@ String[] array5 = set.toArray(new String[0]);
 String[] array6 = set.toArray(new String[set1.size()]);    //more efficient
 ```
 
-## List <-> Set
+
+### List <-> Set
 
 ```
  //list to set
@@ -90,7 +94,8 @@ Set<String> set = new HashSet<>(list1);
 LinkedList<String> list = new LinkedList<>(set4);
 ```
 
-## Map to collection
+
+### Map to collection
 
 ```
 Map<String,Integer> map = new HashMap<>();
