@@ -8,7 +8,7 @@
 
 [README](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/aspect/Aspect.md)
 
-[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/aspect/code)
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/aspect/Proxy.md)
 
 # Spring AOP vs AspectJ
 
