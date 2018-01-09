@@ -56,7 +56,7 @@ These activities are known as bean Lifecycle.
 17. Custome destroy method will be executed if there is any defined via destroy-method attributes
 
 
-# Usage
+# Usage in Spring
 
 CoreConfig.java
 ```

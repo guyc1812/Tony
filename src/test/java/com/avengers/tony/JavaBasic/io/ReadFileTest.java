@@ -1,4 +1,4 @@
-package com.avengers.tony.JavaBasic.readFile;
+package com.avengers.tony.JavaBasic.io;
 
 import org.junit.Test;
 

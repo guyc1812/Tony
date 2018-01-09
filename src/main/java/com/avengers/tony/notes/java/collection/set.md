@@ -12,7 +12,8 @@ At first glance, HashSet is superior in almost every way: O(1) add, remove and c
 
 However, TreeSet is indispensable when you wish to maintain order over the inserted elements or query for a range of elements within the set.
 
-Consider a Set of timestamped Event objects. They could be stored in a HashSet, with equals and hashCode based on that timestamp. This is efficient storage and permits looking up events by a specific timestamp, but how would you get all events that happened on any given day? That would require a O(n) traversal of the HashSet, but it’s only a O(log(n)) operation with TreeSet using the tailSet method:
+Consider a Set of timestamped Event objects. They could be stored in a HashSet, with equals and hashCode based on that timestamp. 
+This is efficient storage and permits looking up events by a specific timestamp, but how would you get all events that happened on any given day? That would require a O(n) traversal of the HashSet, but it’s only a O(log(n)) operation with TreeSet using the tailSet method:
 ```
         public class Event implements Comparable<Event> {
             private final long timestamp;

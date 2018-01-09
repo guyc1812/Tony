@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 @Service("myComparator")
 public class MyComparator {
@@ -49,6 +51,16 @@ public class MyComparator {
         Comparator<Avenger> comparatorByAge = Comparator.comparing(Avenger::getAge).reversed();
         avengers.sort(comparatorByAge);
         return avengers;
+
+    }
+
+    public static void main(String[] args){
+
+
+        TreeSet<Avenger> treeSet = new TreeSet<>(Comparator.comparing(Avenger::getName));
+
+        TreeMap<Avenger,String> treeMap = new TreeMap<>(Comparator.comparing(Avenger::getName));
+
 
     }
 

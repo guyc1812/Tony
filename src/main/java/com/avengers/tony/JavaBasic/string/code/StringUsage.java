@@ -1,6 +1,6 @@
-package com.avengers.tony.JavaBasic.string;
+package com.avengers.tony.JavaBasic.string.code;
 
-public class StringDemo {
+public class StringUsage {
 
     public static void main(String[] args){
 

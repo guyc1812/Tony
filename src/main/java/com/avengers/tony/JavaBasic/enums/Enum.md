@@ -187,7 +187,6 @@ public class Test {
         }
     }
 
-    Output:
-
-    30.0
+    // Output:
+    // 30.0
     ```

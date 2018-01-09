@@ -27,7 +27,7 @@ public class multiThread_3 {
         // A Callable
         Callable call = new Callable(){public Object call() throws Exception{ return "Callable Result";}};
 
-        // A list_linkedList of Callable
+        // A linkedList of Callable
         Set<Callable<String>> callables = new HashSet<>();
         callables.add(() -> "Task 1");
         callables.add(() -> "Task 2");

@@ -1,16 +1,24 @@
 # HashTable
 
-To successfully store and retrieve objects from a hashtable, 
-the objects used as keys must implement the hashCode method and the equals method.
-
-NULL?
+![HashTable](../../../../imgs/hashtable.jpg)
 
 
+### Basic
+
+* Hash table extends *Dictionary<K,V>* implements *Map<K,V>*,
+* NO Permits NULL, NullPointerException.
+* Thread safe, all the methods is wrapped by *Synchronized*
+    Since null isn't an object, you can't call .equals() or .hashCode() on it, <br>
+    so the Hashtable can't compute a hash to use it as a key.
+* To successfully store and retrieve **Objects** from a hashtable,<br>
+    the objects used as keys must implement the hashCode method and the equals method.
+* The Iterators returned by the iterator method are fail-fast.
+* The Enumerations returned by Hashtable's keys and elements methods are not fail-fast.
 
 
+### Data Structure
 
-# Data Structure
-
+```
 private transient Entry<?,?>[] table;
 
 Entry<K,V> implements Map.Entry<K,V> {
@@ -19,10 +27,12 @@ Entry<K,V> implements Map.Entry<K,V> {
     V value;
     Entry<K,V> next;
 }
+```
 
 
-# Constructor
+### Constructor
 
+```
 public Hashtable(int initialCapacity, float loadFactor) {
     if (initialCapacity < 0)
         throw new IllegalArgumentException("Illegal Capacity: "+
@@ -48,10 +58,12 @@ public Hashtable(Map<? extends K, ? extends V> t) {
     this(Math.max(2*t.size(), 11), 0.75f);
     putAll(t);
 }
+```
 
 
-# apis
+### apis
 
+```
 // all the methods is synchronized
 
 // Hashtable<K,V> extends Dictionary<K,V>
@@ -77,6 +89,7 @@ public synchronized boolean contains(Object value)
 public boolean containsValue(Object value) {
     return contains(value); //public synchronized boolean contains(Object value)
 }
+
 public synchronized boolean containsKey(Object key) 
 public synchronized V get(Object key)
 public synchronized V put(K key, V value)
@@ -89,8 +102,6 @@ public synchronized Object clone()
 
 public synchronized boolean replace(K key, V oldValue, V newValue)
 public synchronized V replace(K key, V value) 
-
-
 
 public Set<K> keySet() {
     if (keySet == null)
@@ -109,7 +120,54 @@ public Collection<V> values() {
 }
 public synchronized boolean equals(Object o)
 public synchronized int hashCode() 
+```
 
 
+### iterator
 
-# iterator
+```
+// traversal of entrySet
+Iterator iter1 = table.entrySet().iterator();
+while(iter1.hasNext()) {
+    Map.Entry entry = (Map.Entry)iter1.next();
+    String k = (String)entry.getKey();
+    int v = (Integer)entry.getValue();
+}
+
+// traversal of keySet
+Iterator iter2 = table.keySet().iterator();
+while (iter2.hasNext()) {
+    String k = (String)iter2.next();
+    int v = table.get(k);
+}
+
+// traversal of values
+Collection c = table.values();
+Iterator iter3= c.iterator();
+while (iter3.hasNext()) {
+    int v = (Integer)iter3.next();
+}
+
+// traversal of entries
+table.forEach((k,v)->{
+    String key = k;
+    int value = v;
+});
+
+// traversal by Enumeration of keys
+Enumeration enu1 = table.keys();
+while(enu1.hasMoreElements()) {
+    System.out.println(enu1.nextElement());
+}
+
+// traversal by Enumeration of values
+Enumeration enu2 = table.elements();
+while(enu2.hasMoreElements()) {
+    System.out.println(enu2.nextElement());
+}
+```
+
+
+### Usage Demo
+
+[CODE]()

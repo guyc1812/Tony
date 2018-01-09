@@ -1,20 +1,25 @@
 # TreeMap
 
-A Red-Black tree based NavigableMap implementation.
-
-This implementation provides guaranteed log(n) time cost for the 
-containsKey, get, put and remove operations.
+![TreeMap](../../../../imgs/treeMap.jpg)
 
 
-SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));
+### Basic
 
+* A Red-Black tree extends *AbstractMap<K,V>* implements *NavigableMap<K,V>*.
+* NO Permits NULL, NullPointerException.
+* provides guaranteed log(n) time cost for the containsKey, get, put and remove operations.
+* Use fail-fast iterators.
+* No thread safe
+    ```
+    SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));
+    ```
 
+### Data Structure
 
-
-# Data Structure
-
+```
 private transient Entry<K,V> root;
 
+// BR Tree
 Entry<K,V> implements Map.Entry<K,V> {
     K key;
     V value;
@@ -23,11 +28,12 @@ Entry<K,V> implements Map.Entry<K,V> {
     Entry<K,V> parent;
     boolean color = BLACK;
 }
+```
 
 
+### Constructor
 
-# Constructor
-
+```
 public TreeMap() {
     comparator = null;
 }
@@ -49,20 +55,19 @@ public TreeMap(SortedMap<K, ? extends V> m) {
     } catch (ClassNotFoundException cannotHappen) {
     }
 }
+```
 
 
+### apis
 
-
-# apis
-
+```
 public K firstKey() 
 public K lastKey()
 
 public boolean replace(K key, V oldValue, V newValue)
 public V replace(K key, V value)
 
-
-# TreeMap<K,V> extends AbstractMap<K,V>
+// TreeMap<K,V> extends AbstractMap<K,V>
 
 public int size()
 public boolean isEmpty()
@@ -84,11 +89,12 @@ public Set<Map.Entry<K,V>> entrySet()
 public boolean equals(Object o) 
 public int hashCode()
 public Object clone() 
+```
 
 
+### TreeMap<K,V> implements NavigableMap<K,V>
 
-# TreeMap<K,V> implements NavigableMap<K,V>
-
+```
 public Map.Entry<K,V> firstEntry() 
 public Map.Entry<K,V> lastEntry() 
 public Map.Entry<K,V> pollFirstEntry() 
@@ -119,11 +125,12 @@ public NavigableSet<K> navigableKeySet()
 public NavigableSet<K> descendingKeySet()
 
 public NavigableMap<K, V> descendingMap()
+```
 
 
+### Iterator
 
-# Iterator
-
+```
 Iterator<K> keyIterator()
-
 Iterator<K> descendingKeyIterator() 
+```

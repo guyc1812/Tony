@@ -1,17 +1,17 @@
-package com.avengers.tony.JavaBasic.reflection;
+package com.avengers.tony.JavaBasic.reflection.code;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-public class TestReflection {
+public class ReflectionUsage {
 
     public static void main(String args[]) throws Exception {
 
 
         // access class
-        Class way1 = Class.forName("com.avengers.tony.JavaBasic.reflection.ChildObj");
+        Class way1 = Class.forName("com.avengers.tony.JavaBasic.reflection.code.ChildObj");
         Class way2 = ChildObj.class;
 
         ChildObj obj = new ChildObj();

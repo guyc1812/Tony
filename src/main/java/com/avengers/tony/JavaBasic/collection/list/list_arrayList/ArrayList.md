@@ -1,25 +1,34 @@
 # ArrayList
 
-* Resizable-array implementation of the List interface.
+### Basic
+
+* Resizable-array extends *AbstractList<E>* implements *List<E>*
 * Permit NULL.
-* size(), isEmpty(), get(), set(), iterator(), ListIterator() operations run in constant time O(1).
-* add() operation runs in amortized constant time O(n).
-* Other operations run in linear time O(n).
+* Provides constant-time performance for size(), isEmpty(), get(), set(), iterator(), ListIterator().
+* add(), remove() operations runs in amortized constant time O(n).
 * Capacity >= Size, default capacity is 10.
-* No thread safe.
 * Use fail-fast iterators.
+* No thread safe.
+    ```
+    List list = Collections.synchronizedList(new ArrayList(...));
+    ```
+
+### Source
 
 * Data Structure
+
     ```
     transient Object[] elementData
     ```
     
 * DEFAULT_CAPACITY 
+
     ```
     private static final int DEFAULT_CAPACITY = 10;
     ```
 
 * Constructor
+
     ```
     // 1. DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {}
     public ArrayList() {
@@ -226,3 +235,7 @@
         size = newSize;
     }
     ```
+    
+### Usage Demo
+
+[CODE]()

@@ -11,6 +11,6 @@ import lombok.*;
 public class Avenger {
 
     private String name;
-    private Integer age;
+    private int age;
 
 }

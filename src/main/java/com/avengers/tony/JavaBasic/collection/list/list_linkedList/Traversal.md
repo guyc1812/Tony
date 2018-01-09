@@ -1,4 +1,4 @@
-# Traversal of ArrayList
+# Traversal of LinkedList
 
 ### Get List
 
@@ -14,7 +14,7 @@ private static ArrayList getLinkedList(int num) {
 
 ```
 /* Traversal By Iterator */
-private static void traversalByIterator(ArrayList<Integer> list) {
+private static void traversalByIterator(LinkedList<Integer> list) {
     if (list == null) return;
     Timer.start();
     Iterator<Integer> iterator = list.iterator();
@@ -25,7 +25,7 @@ private static void traversalByIterator(ArrayList<Integer> list) {
 }
 
 /* Traversal By ForEach */
-private static void traversalByForEach(ArrayList<Integer> list) {
+private static void traversalByForEach(LinkedList<Integer> list) {
     if (list == null) return;
     Timer.start();
     for (Integer item : list){
@@ -34,25 +34,13 @@ private static void traversalByForEach(ArrayList<Integer> list) {
     Timer.end();
 }
 
-/* Traversal By ForLoop */
-private static void traversalByFor(ArrayList<Integer> list) {
+/* Traversal By ForLoop => avoid this */
+private static void traversalByForLoop(LinkedList<Integer> list) {
     if (list == null) return;
     Timer.start();
-    int size = list.size();
-    for (int i = 0; i < size; i++) {
-        int j = list.get(i);
+    for (int i = 0; i < list.size(); i++) {
+        list.get(i);
     }
-    Timer.end();
-}
-
-/* Traversal By Stream */
-private static void traversalByStream(ArrayList<Integer> list) {
-    if (list == null) return;
-    ArrayList<Integer> n = new ArrayList(1000000);
-    Timer.start();
-    list.parallelStream().forEach(item->{
-        int i = item;
-    });
     Timer.end();
 }
 ```
@@ -61,16 +49,13 @@ private static void traversalByStream(ArrayList<Integer> list) {
 
 ```
 public static void main(String[] args) {
-        
-    ArrayList<Integer> t1 = getLinkedList(1000000);
-    ArrayList<Integer> t2 = getLinkedList(1000000);
-    ArrayList<Integer> t3 = getLinkedList(1000000);
-    ArrayList<Integer> t4 = getLinkedList(1000000);
-    
-    traversalByIterator(t1);  //Timer : 11 ms  
-    traversalByForEach(t2);   //Timer : 10 ms  
-    traversalByFor(t3);       //Timer : 9 ms  
-    traversalByStream(t4);    //Timer : 698 ms  
-    
+
+    traversalByIterator(getLinkedList(100000));
+        // Timer : 6 ms
+    traversalByForEach(getLinkedList(100000));
+        // Timer : 5 ms
+    traversalByForLoop(getLinkedList(100000));
+        // Timer : 3287 ms
+
 }
 ```

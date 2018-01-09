@@ -1,31 +1,106 @@
-# ArrayList, LinkedList, Vector, Stack是List的4个实现类。
+# List
+
+### Summary
+
+* ArrayList
+
+    Implements *List<E>*. <br>
+    Dynamic Array.<br>
+    Permits NULLs.<br>
+    No Thread Safe.<br>
+    Fail-Fast.<br>
+    Size: 1.5 times
+    ```
+    initialCapacity = 10;
+    newCapacity = oldCapacity + (oldCapacity >> 1);
+    newCapacity >= minCapacity? newCapacity
+                              : minCapacity
+    ```
     
-* ArrayList 是一个数组队列，相当于动态数组。它由数组实现，随机访问效率高，随机插入、随机删除效率低。
-* LinkedList 是一个双向链表。它也可以被当作堆栈、队列或双端队列进行操作。LinkedList随机访问效率低，但随机插入、随机删除效率低。
-* Vector 是矢量队列，和ArrayList一样，它也是一个动态数组，由数组实现。但是ArrayList是非线程安全的，而Vector是线程安全的。
-* Stack 是栈，它继承于Vector。它的特性是：先进后出(FILO, First In Last Out)。
+* LinkedList
 
-# 使用场景
-
-* 对于需要快速插入，删除元素，应该使用LinkedList。
-* 对于需要快速随机访问元素，应该使用ArrayList。
-* 对于“多线程环境”，使用Vector或者stack。
-
-# 双向链表查找index位置的节点时，有一个加速动作, 若index < 双向链表长度的1/2，则从前向后查找; 否则，从后向前查找。
+    Implements *List<E>*, *Deque<E>*. <br>
+    Double List.<br>
+    Permits NULLs.<br>
+    No Thread Safe.<br>
+    Fail-Fast.<br>
     
-# Vector和ArrayList比较
+* Vector 
 
-   1. 线程安全性不一样：ArrayList是非线程安全, 而Vector是线程安全的。
+    Implements *List<E>*. <br>
+    Dynamic Array.<br>
+    Permits NULLs.<br>
+    Thread Safe (wrapped by Synchronized).<br>
+    Fail-Fast.<br>
+    Supports both Enumeration and Iterator.<br>
+    Size: 2 times
+    ```
+    initialCapacity = 10 ;
+    capacityIncrement? newCapacity = oldCapacity + capacityIncrement
+                     : newCapacity = oldCapacity * 2 ;
+    ```
+    
+* Stack
 
-   2. ArrayList支持序列化，而Vector不支持；即ArrayList有实现java.io.Serializable接口，而Vector没有实现该接口。
+    Extends *Vector<E>*.<br>
+    Thread Safe.<br>
+    FILO, First In Last Out.<br>
+    
+    
+### Performance
 
-   3. ArrayList有3个构造函数，而Vector有4个构造函数。
-      Vector除了包括和ArrayList类似的3个构造函数之外，
-      另外的一个构造函数可以指定容量增加系数。
+* LinkedList is generally provide the best performance. 
+
+    LinkedList is implemented using a doubly linked list. <br>
+    As a result, an inserting or removing an element only requires updating the links with only O(1) cost.
       
-   4. 容量增加方式不同
-   
-      逐个添加元素时，若ArrayList容量不足时，“新的容量”=“(原始容量x3)/2 + 1”。
-      而Vector的容量增长与“增长系数有关”，若指定了“增长系数”，且“增长系数有效(即，大于0)”；那么，每次容量不足时，“新的容量”=“原始容量+增长系数”。若增长系数无效(即，小于/等于0)，则“新的容量”=“原始容量 x 2”。
-      
-   5. 对Enumeration的支持不同。Vector支持通过Enumeration去遍历，而List不支持
+* ArrayList and Vector both use an array to store the elements of the list. 
+
+    As a result, when an element is inserted into (or removed from) the middle of the list, <br>
+    the elements that follow must all be shifted accordingly. 
+
+* Vector is slow as it is thread safe.
+
+    Vector is synchronized, <br>
+    so if a thread-safe implementation is not needed, <br>
+    it is recommended to use ArrayList rather than Vector. <br>
+    So as the stack, which extends the Vector.
+
+    
+### ArrayList vs LinkedList
+
+* Implementation
+
+    ArrayList is the resizable array implementation of list interface , <br>
+    while LinkedList is the Doubly-linked list implementation of the list interface.
+    
+* Performance
+
+    * get(int index) or search operation
+    
+        ArrayList get operation runs in constant time O(1). <br>
+        ArrayList uses index based system, can be randomly accessed.<br>
+        LinkedList get operation run time is O(n).<br>
+        LinkedList iterates either from the beginning or end (whichever is closer) to retrieve the node at the specified element index.
+        
+    * insert() or add(Object) operation
+    
+        LinkedList adding or insertion is O(1) operation.
+        ArrayList adding or insertion is O(n) operation.
+        there is extra cost of  resizing array and copying elements to the new array.
+    
+    * remove(int) operation
+    
+        LinkedList remove() runs in constant time O(1).
+        LinkedList remove(int) or remove(Object) runs in constant time O(n).
+        ArrayList remove(int) method involves copying elements from old array to new updated array , hence its run time is O(n).
+    
+* Reverse  Iterator
+
+    LinkedList can be iterated by descendingIterator() and descendingIterator().
+
+* Memory Overhead
+
+    LinkedList needs to maintain the addresses of next and previous node. 
+    ArrayList each index only holds the actual object(data).
+

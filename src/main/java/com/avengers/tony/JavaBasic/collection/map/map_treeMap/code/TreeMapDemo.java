@@ -1,68 +1,45 @@
-package com.avengers.tony.JavaBasic.collection.map.map_treeMap;
+package com.avengers.tony.JavaBasic.collection.map.map_treeMap.code;
 
 import java.util.*;
 
 public class TreeMapDemo  {
 
     public static void main(String[] args) {
-        // 测试常用的API
-        testTreeMapOridinaryAPIs();
 
-        // 测试TreeMap的导航函数
-        testNavigableMapAPIs();
+        basicApi();
+        navigableApi();
+        subMapApi();
 
-        // 测试TreeMap的子Map函数
-        testSubMapAPIs();
     }
 
-    /**
-     * 测试常用的API
-     */
-    private static void testTreeMapOridinaryAPIs() {
 
-        TreeMap tmap = new TreeMap();
+    // basicApi
+    private static void basicApi() {
+
+        TreeMap<String, Integer> tmap = new TreeMap<>();
 
         tmap.put("one", 1);
         tmap.put("two", 2);
-        tmap.put("three", 3);
+        tmap.put("three", 3);       // {one=1, three=3, two=2}
 
-        System.out.printf("\n ---- testTreeMapOridinaryAPIs ----\n");
-        System.out.printf("%s\n",tmap );
+        tmap.size();                // 3
 
-        // 通过Iterator遍历key-value
-        Iterator iter = tmap.entrySet().iterator();
-        while(iter.hasNext()) {
-            Map.Entry entry = (Map.Entry)iter.next();
-            System.out.printf("next : %s - %s\n", entry.getKey(), entry.getValue());
-        }
+        tmap.containsKey("two");    // true
+        tmap.containsKey("five");   // false
 
-        // TreeMap的键值对个数        
-        System.out.printf("size: %s\n", tmap.size());
+        tmap.containsValue(new Integer(0));     // false
 
-        // containsKey(Object key) :是否包含键key
-        System.out.printf("contains key two : %s\n",tmap.containsKey("two"));
-        System.out.printf("contains key five : %s\n",tmap.containsKey("five"));
+        tmap.remove("three");       // return 3, {one=1, two=2}
 
-        // containsValue(Object value) :是否包含值value
-        System.out.printf("contains value 0 : %s\n",tmap.containsValue(new Integer(0)));
-
-        // remove(Object key) ： 删除键key对应的键值对
-        tmap.remove("three");
-
-        System.out.printf("tmap:%s\n",tmap );
-
-        // clear() ： 清空TreeMap
         tmap.clear();
 
-        // isEmpty() : TreeMap是否为空
-        System.out.printf("%s\n", (tmap.isEmpty()?"tmap is empty":"tmap is not empty") );
+        tmap.isEmpty();             // true
+
     }
 
 
-    /**
-     * 测试TreeMap的子Map函数
-     */
-    public static void testSubMapAPIs() {
+    // subMapApi
+    public static void subMapApi() {
 
         TreeMap tmap = new TreeMap();
 
@@ -72,43 +49,31 @@ public class TreeMapDemo  {
         tmap.put("d", 104);
         tmap.put("e", 105);
 
-        System.out.printf("\n ---- testSubMapAPIs ----\n");
-        System.out.printf("tmap:\n\t%s\n", tmap);
+        // {a=101, b=102, c=103, d=104, e=105}
 
-        // 测试 headMap(K toKey)
-        System.out.printf("tmap.headMap(\"c\"):\n\t%s\n", tmap.headMap("c"));
-        // 测试 headMap(K toKey, boolean inclusive) 
-        System.out.printf("tmap.headMap(\"c\", true):\n\t%s\n", tmap.headMap("c", true));
-        System.out.printf("tmap.headMap(\"c\", false):\n\t%s\n", tmap.headMap("c", false));
+        tmap.headMap("c");                  // {a=101, b=102}
+        tmap.headMap("c", true);            // {a=101, b=102, c=103}
+        tmap.headMap("c", false);           // {a=101, b=102}
 
-        // 测试 tailMap(K fromKey)
-        System.out.printf("tmap.tailMap(\"c\"):\n\t%s\n", tmap.tailMap("c"));
-        // 测试 tailMap(K fromKey, boolean inclusive)
-        System.out.printf("tmap.tailMap(\"c\", true):\n\t%s\n", tmap.tailMap("c", true));
-        System.out.printf("tmap.tailMap(\"c\", false):\n\t%s\n", tmap.tailMap("c", false));
+        tmap.tailMap("c");                  // {c=103, d=104, e=105}
+        tmap.tailMap("c", true);            // {c=103, d=104, e=105}
+        tmap.tailMap("c", false);           // {d=104, e=105}
 
-        // 测试 subMap(K fromKey, K toKey)
-        System.out.printf("tmap.subMap(\"a\", \"c\"):\n\t%s\n", tmap.subMap("a", "c"));
-        // 测试 
-        System.out.printf("tmap.subMap(\"a\", true, \"c\", true):\n\t%s\n",
-                tmap.subMap("a", true, "c", true));
-        System.out.printf("tmap.subMap(\"a\", true, \"c\", false):\n\t%s\n",
-                tmap.subMap("a", true, "c", false));
-        System.out.printf("tmap.subMap(\"a\", false, \"c\", true):\n\t%s\n",
-                tmap.subMap("a", false, "c", true));
-        System.out.printf("tmap.subMap(\"a\", false, \"c\", false):\n\t%s\n",
-                tmap.subMap("a", false, "c", false));
+        tmap.subMap("a", "c");              // {a=101, b=102}
+        tmap.subMap("a", true, "c", true);  // {a=101, b=102, c=103}
+        tmap.subMap("a", true, "c", false); // {a=101, b=102}
+        tmap.subMap("a", false, "c", true); // {b=102, c=103}
+        tmap.subMap("a", false, "c", false);// {b=102}
 
-        // 测试 navigableKeySet()
-        System.out.printf("tmap.navigableKeySet():\n\t%s\n", tmap.navigableKeySet());
-        // 测试 descendingKeySet()
-        System.out.printf("tmap.descendingKeySet():\n\t%s\n", tmap.descendingKeySet());
+        tmap.navigableKeySet();             // [a, b, c, d, e]
+
+        tmap.descendingKeySet();            // [e, d, c, b, a]
+
     }
 
-    /**
-     * 测试TreeMap的导航函数
-     */
-    public static void testNavigableMapAPIs() {
+
+    // navigableApi
+    public static void navigableApi() {
 
         NavigableMap nav = new TreeMap();
 
@@ -118,27 +83,19 @@ public class TreeMapDemo  {
         nav.put("ccc", 555);
         nav.put("ddd", 444);
 
-        System.out.printf("\n ---- testNavigableMapAPIs ----\n");
-        // 打印出TreeMap
-        System.out.printf("Whole list:%s%n", nav);
+        // {aaa=111, bbb=222, ccc=555, ddd=444, eee=333} with order
 
-        // 获取第一个key、第一个Entry
-        System.out.printf("First key: %s\tFirst entry: %s%n",nav.firstKey(), nav.firstEntry());
+        nav.firstKey();         // aaa or NoSuchElementException
+        nav.firstEntry();       // aaa=111 or NoSuchElementException
 
-        // 获取最后一个key、最后一个Entry
-        System.out.printf("Last key: %s\tLast entry: %s%n",nav.lastKey(), nav.lastEntry());
+        nav.lastKey();          // eee or NoSuchElementException
+        nav.lastEntry();        // eee=333 or NoSuchElementException
 
-        // 获取“小于/等于bbb”的最大键值对
-        System.out.printf("Key floor before bbb: %s%n",nav.floorKey("bbb"));
+        nav.floorKey("bbb");    // bbb or null
+        nav.lowerKey("bbb");    // aaa or null
 
-        // 获取“小于bbb”的最大键值对
-        System.out.printf("Key lower before bbb: %s%n", nav.lowerKey("bbb"));
-
-        // 获取“大于/等于bbb”的最小键值对
-        System.out.printf("Key ceiling after ccc: %s%n",nav.ceilingKey("ccc"));
-
-        // 获取“大于bbb”的最小键值对
-        System.out.printf("Key higher after ccc: %s%n\n",nav.higherKey("ccc"));
+        nav.ceilingKey("ccc");  // ccc or null
+        nav.higherKey("ccc");   // ddd or null
     }
 
 }

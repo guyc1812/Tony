@@ -6,7 +6,8 @@ import java.util.Map;
 
 public class Enums {
 
-    public static final Map<String, Boolean> FEATURE_FLAGS;
+
+    private static final Map<String, Boolean> FEATURE_FLAGS;
 
     static {
         Map<String, Boolean> flags = new HashMap<>();
@@ -15,7 +16,6 @@ public class Enums {
         FEATURE_FLAGS = Collections.unmodifiableMap(flags);
 
     }
-
 
     public static void main(String[] args) {
         System.out.println(FEATURE_FLAGS);

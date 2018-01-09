@@ -1,4 +1,4 @@
-package com.avengers.tony.JavaBasic.collection.set.map_treeSet;
+package com.avengers.tony.JavaBasic.collection.set.map_treeSet.code;
 
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -15,26 +15,23 @@ public class TreeSetDemo {
         tSet.add("ddd");
         tSet.add("ccc");
 
-
-        // 顺序遍历TreeSet
+        // asc TreeSet
         ascIteratorThroughIterator(tSet) ;
-        // 逆序遍历TreeSet
+        // desc TreeSet
         descIteratorThroughIterator(tSet);
-        // 通过for-each遍历TreeSet。不推荐！此方法需要先将Set转换为数组
+        // for-each
         foreachTreeSet(tSet);
 
-        // 打印TreeSet的实际大小
         System.out.printf("size : %d\n", tSet.size());
 
-        // 导航方法
-        // floor(小于、等于)
+        // floor(<=)
         System.out.printf("floor bbb: %s\n", tSet.floor("bbb"));
-        // lower(小于)
+        // lower(<)
         System.out.printf("lower bbb: %s\n", tSet.lower("bbb"));
-        // ceiling(大于、等于)
+        // ceiling(>=)
         System.out.printf("ceiling bbb: %s\n", tSet.ceiling("bbb"));
         System.out.printf("ceiling eee: %s\n", tSet.ceiling("eee"));
-        // ceiling(大于)
+        // ceiling(>)
         System.out.printf("higher bbb: %s\n", tSet.higher("bbb"));
         // subSet()
         System.out.printf("subSet(aaa, true, ccc, true): %s\n", tSet.subSet("aaa", true, "ccc", true));
@@ -49,37 +46,35 @@ public class TreeSetDemo {
         System.out.printf("tailSet(ccc, false): %s\n", tSet.tailSet("ccc", false));
 
 
-        // 删除“ccc”
+        // remove
         tSet.remove("ccc");
-        // 将Set转换为数组
+
+        // to array
         String[] arr = (String[])tSet.toArray(new String[0]);
         for (String str:arr)
             System.out.printf("for each : %s\n", str);
 
-        // 打印TreeSet
         System.out.printf("TreeSet:%s\n", tSet);
 
-        // 遍历TreeSet
+        // Iterator
         for(Iterator iter = tSet.iterator(); iter.hasNext(); ) {
             System.out.printf("iter : %s\n", iter.next());
         }
 
-        // 删除并返回第一个元素
+        // pollFirst
         String val1 = (String)tSet.pollFirst();
         System.out.printf("pollFirst=%s, set=%s\n", val1, tSet);
 
-        // 删除并返回最后一个元素
+        // pollLast
         String valn = (String)tSet.pollLast();
         System.out.printf("pollLast=%s, set=%s\n", valn, tSet);
 
-        // 清空HashSet
         tSet.clear();
 
-        // 输出HashSet是否为空
         System.out.printf("%s\n", tSet.isEmpty()?"set is empty":"set is not empty");
     }
 
-    // 顺序遍历TreeSet
+    // asc
     public static void ascIteratorThroughIterator(TreeSet set) {
         System.out.print("\n ---- Ascend Iterator ----\n");
         for(Iterator iter = set.iterator(); iter.hasNext(); ) {
@@ -87,14 +82,14 @@ public class TreeSetDemo {
         }
     }
 
-    // 逆序遍历TreeSet
+    // desc
     public static void descIteratorThroughIterator(TreeSet set) {
         System.out.printf("\n ---- Descend Iterator ----\n");
         for(Iterator iter = set.descendingIterator(); iter.hasNext(); )
             System.out.printf("desc : %s\n", (String)iter.next());
     }
 
-    // 通过for-each遍历TreeSet。不推荐！此方法需要先将Set转换为数组
+    // for-each
     private static void foreachTreeSet(TreeSet set) {
         System.out.printf("\n ---- For-each ----\n");
         String[] arr = (String[])set.toArray(new String[0]);

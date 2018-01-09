@@ -1,25 +1,21 @@
-package com.avengers.tony.JavaBasic.collection.list.list_arrayList;
+package com.avengers.tony.JavaBasic.collection.list.list_arrayList.code;
 
 import java.util.*;
 
-/*****
- * Created by apple on 2017/11/26.
- */
-public class ListDemo {
+public class ArrayListUsage {
 
     public static void main(String[] args) {
-
-
-        Set<String> set = new HashSet();
-        set.add("a");
-        set.add("b");
-        set.add("c");
 
         ArrayList<String> list = new ArrayList();
         list.add("1");
         list.add("2");
         list.add("3");
         list.add("4");
+
+        Set<String> set = new HashSet();
+        set.add("a");
+        set.add("b");
+        set.add("c");
 
         HashMap<String,String> map = new HashMap();
 
@@ -30,32 +26,29 @@ public class ListDemo {
         list.addAll(set);
         list.addAll(map.keySet());
 
-
-        // 删除“3”
+        // Remove “3”
         list.remove("3");
 
-
-        // 判断list中是否包含"3"
+        // If contains "3"
         System.out.println("ArrayList contains 3 is: "+ list.contains(3));
 
-        // 设置第2个元素为10
+        // Set the 2nd element to 10
         list.set(1, "10");
 
-        // 通过Iterator遍历ArrayList
+        // Traversal by Iterator
         for(Iterator iter = list.iterator(); iter.hasNext(); ) {
             System.out.println("next is: "+ iter.next());
         }
 
-        // 将ArrayList转换为数组
+        // ArrayList to array
         String[] arr = (String[])list.toArray(new String[0]);
         System.out.println(Arrays.toString(arr));
 
-        // 清空ArrayList
+        // Clear ArrayList
         list.clear();
 
-        // 判断ArrayList是否为空
+        // If Empty
         System.out.println("ArrayList is empty: "+ list.isEmpty());
     }
-
 
 }

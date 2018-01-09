@@ -1,4 +1,4 @@
-package com.avengers.tony.JavaBasic.collection.list.list_arrayList;
+package com.avengers.tony.JavaBasic.collection.list.list_arrayList.code;
 
 import com.avengers.tony.JavaBasic.time.Timer;
 
@@ -8,12 +8,11 @@ import java.util.Iterator;
 
 public class Traversal {
 
-    private static ArrayList getLinkedList(int num) {
-        ArrayList linkedList = new ArrayList();
-        for (int i = 0; i < num; i++) linkedList.add(i);
-        return linkedList;
+    private static ArrayList getArrayList(int num) {
+        ArrayList arrayList = new ArrayList();
+        for (int i = 0; i < num; i++) arrayList.add(i);
+        return arrayList;
     }
-
 
     /* Traversal By Iterator */
     private static void traversalByIterator(ArrayList<Integer> list) {
@@ -26,7 +25,6 @@ public class Traversal {
         Timer.end();
     }
 
-
     /* Traversal By ForEach */
     private static void traversalByForEach(ArrayList<Integer> list) {
         if (list == null) return;
@@ -37,9 +35,8 @@ public class Traversal {
         Timer.end();
     }
 
-
     /* Traversal By ForLoop */
-    private static void traversalByFor(ArrayList<Integer> list) {
+    private static void traversalByForLoop(ArrayList<Integer> list) {
         if (list == null) return;
         Timer.start();
         int size = list.size();
@@ -49,7 +46,6 @@ public class Traversal {
         Timer.end();
     }
 
-
     /* Traversal By Stream */
     private static void traversalByStream(ArrayList<Integer> list) {
         if (list == null) return;
@@ -57,25 +53,21 @@ public class Traversal {
         Timer.start();
         list.parallelStream().forEach(item->{
             int i = item;
-//            n.add(item);
         });
         Timer.end();
-        // no order
-//        System.out.println(n.get(10));
     }
-
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> t1 = getLinkedList(1000000);
-        ArrayList<Integer> t2 = getLinkedList(1000000);
-        ArrayList<Integer> t3 = getLinkedList(1000000);
-        ArrayList<Integer> t4 = getLinkedList(1000000);
+        ArrayList<Integer> t1 = getArrayList(1000000);
+        ArrayList<Integer> t2 = getArrayList(1000000);
+        ArrayList<Integer> t3 = getArrayList(1000000);
+        ArrayList<Integer> t4 = getArrayList(1000000);
 
-        traversalByIterator(t1);
-        traversalByForEach(t2);
-        traversalByFor(t3);
-        traversalByStream(t4);
+        traversalByIterator(t1);  //Timer : 11 ms
+        traversalByForEach(t2);   //Timer : 10 ms
+        traversalByForLoop(t3);       //Timer : 9 ms
+        traversalByStream(t4);    //Timer : 698 ms
 
     }
 }
