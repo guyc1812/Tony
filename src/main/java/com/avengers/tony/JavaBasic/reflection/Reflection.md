@@ -38,7 +38,7 @@ Drawbacks:
 
 # Example
 
-```java
+```
 public class RootObj {
 
     private String rootField;
@@ -61,7 +61,7 @@ public class RootObj {
 }
 ```
 
-```java
+```
 public class ChildObj extends RootObj{
 
     private String childfield1;
@@ -91,7 +91,7 @@ public class ChildObj extends RootObj{
 ```
 
 ### Access Class
-```java
+```
 // 1. Class.forName() method, used in db driver
 //    If java.lang.ClassNotFoundException => require the full class name
 Class way1 = Class.forName("com.avengers.core.demo.JavaBasic.reflection.ChildObj"); 
@@ -105,7 +105,7 @@ Class way3 = obj.getClass();
 ```
 
 ### Create Instance
-```java
+```
 // 1. Class.newInstance() => Object
 ChildObj copy1 = (ChildObj)way3.newInstance();
 
@@ -125,7 +125,7 @@ Includes inherited counterparts.
 
 ### Access Constructor
 Get a exact constructor
-```java
+```
 // getConstructor()  ==>  public ChildObj()  {}
 Constructor constructor = way3.getConstructor();
 // getDeclaredConstructor()  ==>  private ChildObj(String text) {}
@@ -149,7 +149,7 @@ for (Constructor one:declaredConstructors) System.out.println("declaredConstruct
 ```
 
 ### Access Method
-```java
+```
 // getMethods()
 Method[] methods = way3.getMethods();
 for (Method method:methods) System.out.println("Method Name is "+method.getName());
@@ -193,7 +193,7 @@ method3.invoke(obj);
 
 
 ### Access Fields
-```java
+```
 StringBuffer sb = new StringBuffer();
 sb.append(Modifier.toString(way3.getModifiers()) + " class " + way3.getSimpleName() +"{\n");
 Field[] fs = way3.getDeclaredFields();

@@ -3,10 +3,12 @@
 "strong" -- is how they interact with the garbage collector.<br>
 
 * Strong reference
+
     A Strong reference is a normal reference that protects the referred object from collection by GC.
     i.e. Never garbage collects.
 
 * Soft reference
+
     A Soft reference is eligible for collection by garbage collector, 
     but will only be collected when GC'S algorithms decide that memory is low enough to warrant it.
     i.e. garbage collects before OutOfMemoryError.
@@ -16,6 +18,7 @@
     ```
 
 * Weak reference
+
     A Weak reference is a reference that does not protect a referenced object from collection by GC. 
     i.e. garbage collects when no Strong or Soft refs.
     ```
@@ -24,7 +27,8 @@
     ```
 
 * Phantom reference
-    A Phantom reference is a reference to an object is phantomly referenced after it has been finalized, 
+
+    An object is phantomly referenced after it has been finalized, 
     but before its allocated memory has been reclaimed.
     Phantom references are safe way to know an object has been removed from memory.
     For instance, 
