@@ -2,13 +2,13 @@ package com.avengers.tony.JavaBasic.thread;
 
 import java.util.concurrent.Semaphore;
 
-public class multiThread_1 extends Thread {
+public class MultiThreads_Thread extends Thread {
 
     private Semaphore semaphore;
     private String threadName;
     private String series;
 
-    private multiThread_1(Semaphore semaphore, String threadName, String series) {
+    private MultiThreads_Thread(Semaphore semaphore, String threadName, String series) {
         this.semaphore = semaphore;
         this.threadName = threadName;
         this.series = series;
@@ -53,9 +53,9 @@ public class multiThread_1 extends Thread {
     public static void main(String[] args) {
         String series = "010203040506";
         Semaphore sem = new Semaphore(1);
-        multiThread_1 t1 = new multiThread_1(sem, "1",series);
-        multiThread_1 t2 = new multiThread_1(sem, "2",series);
-        multiThread_1 t3 = new multiThread_1(sem, "3",series);
+        MultiThreads_Thread t1 = new MultiThreads_Thread(sem, "1",series);
+        MultiThreads_Thread t2 = new MultiThreads_Thread(sem, "2",series);
+        MultiThreads_Thread t3 = new MultiThreads_Thread(sem, "3",series);
         t1.start();
         t2.start();
         t3.start();

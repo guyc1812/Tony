@@ -10,16 +10,17 @@ import java.util.concurrent.Future;
 
 public class multiThread_3 {
 
-    ExecutorService executorService1 = Executors.newSingleThreadExecutor();
-
-    ExecutorService executorService2 = Executors.newFixedThreadPool(10);
-
-    ExecutorService executorService3 = Executors.newScheduledThreadPool(10);
-
-    ExecutorService executorService4 = Executors.newCachedThreadPool();
 
 
     public static void main(String[] args) {
+
+        ExecutorService executorService1 = Executors.newSingleThreadExecutor();
+
+        ExecutorService executorService2 = Executors.newFixedThreadPool(10);
+
+        ExecutorService executorService3 = Executors.newScheduledThreadPool(10);
+
+        ExecutorService executorService4 = Executors.newCachedThreadPool();
 
         // A Runnable
         Runnable run = new Runnable() {public void run() { System.out.println("Asynchronous task");}};
@@ -33,14 +34,12 @@ public class multiThread_3 {
         callables.add(() -> "Task 2");
         callables.add(() -> "Task 3");
 
-        multiThread_3 thread = new multiThread_3();
-
         // execute(run)
-        thread.executorService1.execute(run);
+        executorService1.execute(run);
 
         // submit(Runnable)
         try{
-            Future future1 = thread.executorService1.submit(run);
+            Future future1 = executorService1.submit(run);
             System.out.println("future.get = " + future1.get());  //returns null if the task has finished correctly.
         }catch (Exception e){
             e.printStackTrace();
@@ -48,7 +47,7 @@ public class multiThread_3 {
 
         // submit(Callable)
         try{
-            Future future2 = thread.executorService1.submit(call);
+            Future future2 = executorService1.submit(call);
             System.out.println("future.get = " + future2.get());  //returns null if the task has finished correctly.
         }catch (Exception e){
             e.printStackTrace();
@@ -56,7 +55,7 @@ public class multiThread_3 {
 
         // invokeAny(Callable)
         try{
-            String result = thread.executorService1.invokeAny(callables);
+            String result = executorService1.invokeAny(callables);
             System.out.println("result = " + result);
         }catch (Exception e){
             e.printStackTrace();
@@ -64,7 +63,7 @@ public class multiThread_3 {
 
         // invokeAll(callables)
         try{
-            List<Future<String>> futures = thread.executorService1.invokeAll(callables);
+            List<Future<String>> futures = executorService1.invokeAll(callables);
             for(Future<String> future : futures){
                 System.out.println("future.get = " + future.get());
             }
@@ -72,7 +71,7 @@ public class multiThread_3 {
             e.printStackTrace();
         }
 
-        thread.executorService1.shutdown();
+        executorService1.shutdown();
 
     }
 

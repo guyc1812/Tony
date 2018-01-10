@@ -2,7 +2,7 @@ package com.avengers.tony.JavaBasic.comparator;
 
 import com.avengers.tony.BaseTest;
 import com.avengers.tony.JavaBasic.comparator.code.Avenger;
-import com.avengers.tony.JavaBasic.comparator.code.MyComparator;
+import com.avengers.tony.JavaBasic.comparator.code.ComparatorUsage;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.List;
 public class ComparatorDemoTest extends BaseTest {
 
     @Autowired
-    MyComparator myComparator;
+    ComparatorUsage myComparator;
 
     Avenger IronMan = new Avenger("Tony", 40);
     Avenger Hulk = new Avenger("Banner", 44);

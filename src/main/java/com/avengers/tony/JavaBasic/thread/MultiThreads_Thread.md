@@ -11,21 +11,21 @@ Output: <br>
 [thread]3:135
 
 
-### implements Runnable
+### extends Thread
 
-* MultiThreads_Runnable implements Runnable 
+* MultiThreads_Thread extends Thread 
 * Override run() method
-* new Thread(Runnable).start();
+* Call thread.start() method
 * Semaphore is used to control how many threads can be executed at a same time.
 
 ```
-public class MultiThreads_Runnable implements Runnable {
+public class MultiThreads_Thread extends Thread {
 
     private Semaphore semaphore;
     private String threadName;
     private String series;
 
-    public MultiThreads_Runnable(Semaphore semaphore, String threadName, String series) {
+    private MultiThreads_Thread(Semaphore semaphore, String threadName, String series) {
         this.semaphore = semaphore;
         this.threadName = threadName;
         this.series = series;
@@ -72,15 +72,12 @@ public class MultiThreads_Runnable implements Runnable {
 Test
 
 ```
-public static void main(String args[]) {
+public static void main(String[] args) {
     String series = "010203040506";
     Semaphore sem = new Semaphore(1);
-    MultiThreads_Runnable R1 = new MultiThreads_Runnable(sem, "1",series);
-    MultiThreads_Runnable R2 = new MultiThreads_Runnable(sem, "2",series);
-    MultiThreads_Runnable R3 = new MultiThreads_Runnable(sem, "3",series);
-    Thread t1 = new Thread(R1);
-    Thread t2 = new Thread(R2);
-    Thread t3 = new Thread(R3);
+    MultiThreads_Thread t1 = new MultiThreads_Thread(sem, "1",series);
+    MultiThreads_Thread t2 = new MultiThreads_Thread(sem, "2",series);
+    MultiThreads_Thread t3 = new MultiThreads_Thread(sem, "3",series);
     t1.start();
     t2.start();
     t3.start();

@@ -62,7 +62,7 @@ public class MultiThreads_Runnable implements Runnable {
         t1.start();
         t2.start();
         t3.start();
-//        t3.run();
+        t3.run();
     }
 
 
