@@ -53,28 +53,7 @@
     The Lock API provides a method lockInterruptibly() which can be used to interrupt the thread when it is waiting for the lock.
 * A synchronized block does not need to unlock
     The Lock needs to "unlock" in the finally block
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* A synchronized is also a ReentrantLock type.
 
 
 
