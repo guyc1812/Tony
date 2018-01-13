@@ -1,13 +1,19 @@
-package com.avengers.tony.JavaBasic.thread;
+# Start and Run Method
 
-import java.util.concurrent.Semaphore;
+### Demo
 
-/**
- * Created by yucgu on 2018/1/10.
- */
-public class TestMain {
+* thread.start()
+    
+    correspond to the child thread
+    
+* thread.run()
 
-    public static void main(String args[]) {
+    correspond to the current thread
+
+
+```
+public static void main(String args[]) {
+
         String series = "010203040506";
         Semaphore sem = new Semaphore(1);
         MultiThreads_Runnable R1 = new MultiThreads_Runnable(sem, "1",series);
@@ -19,7 +25,23 @@ public class TestMain {
         t1.start();
         t2.start();
         t3.start();
-        t3.run();
-    }
-
+        t3.run();       // run()
 }
+
+```
+
+Output
+
+```
+main START !
+[thread]3:135
+
+Thread-2 START !
+[thread]3:135
+
+Thread-0 START !
+[thread]1:000000
+
+Thread-1 START !
+[thread]2:246
+```
