@@ -155,6 +155,4 @@ map.forEach((k, v) -> {
 //todo
 
 
-### Usage Demo
-
-[CODE]()
+(https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashMap/code)

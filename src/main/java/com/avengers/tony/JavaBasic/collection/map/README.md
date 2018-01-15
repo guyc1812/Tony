@@ -1,5 +1,13 @@
 # Map
 
+* [Java Map](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/Map.md)
+* [HashMap](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashMap/HashMap.md)
+* [HashTable](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashTable/HashTable.md)
+* TreeMap
+    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/treeMap/TreeMap.md)
+    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/treeMap/TreeMapUsage.md)
+
+
 ### Construction
 
 * Map           Interface, Basic apis
@@ -10,6 +18,9 @@
 * HashMap       class extends AbstractMap, no order.
 * Hashtable     class extends Dictionary, Thread safe, supports both Iterator and Enumeration.
 * WeakHashMap   class extends AbstractMap, but it's key is a WeakReference, which can be recycled by GC.
+
+
+### APIs
 
 * AbstractMap APIs
 
@@ -78,7 +89,6 @@
     ```
 
 
-
 ### WeakHashMap
 
 * Hash table based implementation of the Map interface, with weak keys.
@@ -125,7 +135,6 @@ private static class Entry<K,V> extends WeakReference<Object> implements Map.Ent
 ```
 
 
-
 ### HashMap vs HashTable
 
 * Implementation
@@ -147,7 +156,6 @@ private static class Entry<K,V> extends WeakReference<Object> implements Map.Ent
     * Hashtable 11 -> 11 * 2 + 1
 
 
-
 ### Why HashMap Permits Nulls but HashTable does not
 
 Hashtable is the older class, and its use is generally discouraged. <br>
@@ -159,7 +167,6 @@ which are basically just an improvement on the Hashtable functionality. <br>
 When HashMap was created, it was specifically designed to handle null values as keys and handles them as a special case.
 
 
-
 ### HashMap vs ConcurrentHashMap
 
 * Thread -Safe : 
@@ -169,7 +176,6 @@ When HashMap was created, it was specifically designed to handle null values as 
 * Null Key
     ConcurrentHashMap does not allow NULL values.<br>
     HashMap can only be one null key.
-
 
 
 ### ConcurrentHashMap vs SynchronizedHashMap
@@ -192,7 +198,6 @@ When HashMap was created, it was specifically designed to handle null values as 
     SynchronizedHashMap returns Iterator, which fails-fast on concurrent modification.
 
 
-
 ### Performance of HashMap
 
 An instance of HashMap has two parameters that affect its performance: <br>
@@ -204,7 +209,6 @@ An instance of HashMap has two parameters that affect its performance: <br>
 When the number of entries in the hash table exceeds the product of the load factor and the current capacity, <br>
 the hash table is rehashed (internal data structures are rebuilt),<br>
 so that the hash table has approximately twice the number of buckets.
-
 
 
 ### How Hash Map Works
@@ -256,7 +260,6 @@ Bucket is a simple linked list.<br>
 We traverse through linked list, comparing keys in each entries using keys.equals() until it return true.  <br>
 Then the corresponding entry object Value is returned .
 
-
 **when an element is added/retrieved, same procedure follows:**
 
 1. Using key.hashCode(), determine initial hash value for the key
@@ -265,6 +268,4 @@ Then the corresponding entry object Value is returned .
 
 3. Get the index according to hashValue, and the linked list in the bucket is then iterated over:
     the end is found and the element is added or the key is matched and the value is returned
-
-
 

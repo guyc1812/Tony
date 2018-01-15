@@ -1,5 +1,6 @@
 # Ways for Garbage Collection
 
+
 ### four different ways to make an object eligible for GC.
 
 * Nullifying the reference variable
@@ -17,8 +18,6 @@ t1 = null;
 System.gc();
 ```
 
-[CODE]()
-
 
 ### Re-assigning the reference variable
 
@@ -31,8 +30,6 @@ System.gc();
 
 // t1 be collected
 ```
-
-[CODE]()
 
 
 ### Object created inside method
@@ -58,8 +55,6 @@ public static void main(String args[]) {
 // t1 successfully garbage collected
 ```
 
-[CODE]()
-
 
 ### Island of Isolation
 
@@ -68,5 +63,5 @@ new WaysForGC_4("t1");  // no reference
 System.gc();
 ```
 
-[CODE]()
 
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/reference/code)

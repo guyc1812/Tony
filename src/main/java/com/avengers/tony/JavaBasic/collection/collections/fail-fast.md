@@ -7,7 +7,7 @@ and another thread tries to modify the collection object, <br>
 then **ConcurrentModificationException** will be thrown. <br>
 This is called fail-fast.<br>
 
-reason:<br>
+**Reason:**<br>
 when a iterator calls the next() or remove(), <br>
 the checkForComodification() function will be called first,<br>
 no matter what operation to the collection like add(), remove() or clear(), <br>
@@ -19,7 +19,7 @@ The fail-fast iterator is implemented in the AbstractList class, <br>
 CopyOnWriteArrayList do not extents the AbstractList, <br>
 so there is no fail-fast in the CopyOnWriteArrayList.<br>
 
-Solution:
+**Solution:**
 
 relpace
 

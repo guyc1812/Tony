@@ -18,7 +18,8 @@
 
 * The JVM uses locks in conjunction with monitors. <br>
 * Each monitor is associated with an object reference. 
-![monitor]()
+
+![monitor](../../imgs/java-monitor.gif)
 
 
 ### Synchronized blocks
@@ -54,6 +55,10 @@
 * A synchronized block does not need to unlock
     The Lock needs to "unlock" in the finally block
 * A synchronized is also a ReentrantLock type.
+
+
+
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/code)
 
 
 

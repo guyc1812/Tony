@@ -215,3 +215,6 @@ System.out.println(sb);
 // if way3.getFields();  => public class ChildObj { }
 // cause no piblic fields.
 ```
+
+
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/reflection/code)

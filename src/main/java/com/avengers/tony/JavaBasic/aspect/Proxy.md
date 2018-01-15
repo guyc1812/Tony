@@ -16,7 +16,7 @@ Proxy classes can implement many things in a convenient way without modifying th
 * implement lazy access to costly resources
 
 
-### Usage
+### Demo
 
 * Proxy Class
 
@@ -115,6 +115,8 @@ Proxy classes can implement many things in a convenient way without modifying th
     
     }
     ```
+
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/aspect/code)
 
 
 ### Reference:

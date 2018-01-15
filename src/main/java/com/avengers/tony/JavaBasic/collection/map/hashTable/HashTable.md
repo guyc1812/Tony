@@ -165,6 +165,5 @@ while(enu2.hasMoreElements()) {
 ```
 
 
-### Usage Demo
 
-[CODE]()
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashTable/code)

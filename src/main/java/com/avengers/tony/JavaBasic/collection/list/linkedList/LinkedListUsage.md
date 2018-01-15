@@ -180,4 +180,5 @@ queue.element();        // e or NoSuchElementException(when stack is empty)
     }
     ```
 
-[CODE]()
+
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/list/linkedList/code)

@@ -54,3 +54,6 @@ for (String str:arr){
     System.out.print(str);
 }
 ```
+
+
+[CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/hashSet/code)

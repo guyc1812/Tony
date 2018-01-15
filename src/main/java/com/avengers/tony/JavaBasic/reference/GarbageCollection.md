@@ -24,7 +24,7 @@
 * Object created inside method
 * Island of Isolation
 
-[See Ways for Garbage Collection]()
+[See Ways for Garbage Collection](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/reference/WaysForGC.md)
 
 
 
