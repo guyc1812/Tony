@@ -7,22 +7,21 @@ import java.util.Random;
  */
 public class TimeDemo {
 
-    private int randomGen(int bound){
+    public static void main(String[] args) {
+        System.out.println(new TimeDemo().randomGen(100));
+        System.out.println(new TimeDemo().randomGen(100));
+        System.out.println(new TimeDemo().randomGen(100));
+        System.out.println(new TimeDemo().randomGen(100));
+        System.out.println(new TimeDemo().randomGen(100));
+        System.out.println(new TimeDemo().randomGen(100));
+        System.out.println(new TimeDemo().randomGen(100));
+        System.out.println(new TimeDemo().randomGen(100));
+    }
+
+    private int randomGen(int bound) {
         Random random = new Random(System.currentTimeMillis());
         return random.nextInt(bound);
     }
-
-    public static void main (String[] args){
-        System.out.println(new TimeDemo().randomGen(100));
-        System.out.println(new TimeDemo().randomGen(100));
-        System.out.println(new TimeDemo().randomGen(100));
-        System.out.println(new TimeDemo().randomGen(100));
-        System.out.println(new TimeDemo().randomGen(100));
-        System.out.println(new TimeDemo().randomGen(100));
-        System.out.println(new TimeDemo().randomGen(100));
-        System.out.println(new TimeDemo().randomGen(100));
-    }
-
 
 
 }

@@ -8,11 +8,10 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Storage_AwaitSignal implements Storage {
 
     private final int MAX_SIZE = 100;
-    private LinkedList<Object> list = new LinkedList<>();
-
     private final Lock lock = new ReentrantLock();
     private final Condition full = lock.newCondition();
     private final Condition empty = lock.newCondition();
+    private LinkedList<Object> list = new LinkedList<>();
 
     public void produce(int num) {
 

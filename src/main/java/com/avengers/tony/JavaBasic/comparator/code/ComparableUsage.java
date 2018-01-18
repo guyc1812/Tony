@@ -4,15 +4,13 @@ import com.google.common.collect.Lists;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.TreeMap;
-import java.util.TreeSet;
 
 /**
  * Created by yucgu on 2018/1/9.
  */
 public class ComparableUsage {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         AvengerNext IronMan = new AvengerNext("Tony", 40);
         AvengerNext Hulk = new AvengerNext("Banner", 44);
@@ -24,7 +22,5 @@ public class ComparableUsage {
         Collections.sort(avengers);
         System.out.println(avengers);
     }
-
-
 
 }

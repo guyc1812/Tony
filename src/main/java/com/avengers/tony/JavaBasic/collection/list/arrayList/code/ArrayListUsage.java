@@ -17,7 +17,7 @@ public class ArrayListUsage {
         set.add("b");
         set.add("c");
 
-        HashMap<String,String> map = new HashMap();
+        HashMap<String, String> map = new HashMap();
 
         map.put("one", "1");
         map.put("two", "2");
@@ -30,25 +30,25 @@ public class ArrayListUsage {
         list.remove("3");
 
         // If contains "3"
-        System.out.println("ArrayList contains 3 is: "+ list.contains(3));
+        System.out.println("ArrayList contains 3 is: " + list.contains(3));
 
         // Set the 2nd element to 10
         list.set(1, "10");
 
         // Traversal by Iterator
-        for(Iterator iter = list.iterator(); iter.hasNext(); ) {
-            System.out.println("next is: "+ iter.next());
+        for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+            System.out.println("next is: " + iter.next());
         }
 
         // ArrayList to array
-        String[] arr = (String[])list.toArray(new String[0]);
+        String[] arr = (String[]) list.toArray(new String[0]);
         System.out.println(Arrays.toString(arr));
 
         // Clear ArrayList
         list.clear();
 
         // If Empty
-        System.out.println("ArrayList is empty: "+ list.isEmpty());
+        System.out.println("ArrayList is empty: " + list.isEmpty());
     }
 
 }

@@ -29,7 +29,7 @@ public class Traversal {
     private static void traversalByForEach(ArrayList<Integer> list) {
         if (list == null) return;
         Timer.start();
-        for (Integer item : list){
+        for (Integer item : list) {
             int i = item;
         }
         Timer.end();
@@ -51,7 +51,7 @@ public class Traversal {
         if (list == null) return;
         ArrayList<Integer> n = new ArrayList(1000000);
         Timer.start();
-        list.parallelStream().forEach(item->{
+        list.parallelStream().forEach(item -> {
             int i = item;
         });
         Timer.end();

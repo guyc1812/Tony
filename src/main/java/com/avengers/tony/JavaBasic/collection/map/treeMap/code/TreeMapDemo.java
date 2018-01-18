@@ -1,8 +1,9 @@
 package com.avengers.tony.JavaBasic.collection.map.treeMap.code;
 
-import java.util.*;
+import java.util.NavigableMap;
+import java.util.TreeMap;
 
-public class TreeMapDemo  {
+public class TreeMapDemo {
 
     public static void main(String[] args) {
 

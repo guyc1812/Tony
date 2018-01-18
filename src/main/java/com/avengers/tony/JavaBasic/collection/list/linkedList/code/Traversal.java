@@ -1,6 +1,7 @@
 package com.avengers.tony.JavaBasic.collection.list.linkedList.code;
 
 import com.avengers.tony.JavaBasic.time.Timer;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -27,7 +28,7 @@ public class Traversal {
     private static void traversalByForEach(LinkedList<Integer> list) {
         if (list == null) return;
         Timer.start();
-        for (Integer item : list){
+        for (Integer item : list) {
             int i = item;
         }
         Timer.end();
@@ -46,11 +47,11 @@ public class Traversal {
     public static void main(String[] args) {
 
         traversalByIterator(getLinkedList(100000));
-            // Timer : 6 ms
+        // Timer : 6 ms
         traversalByForEach(getLinkedList(100000));
-            // Timer : 5 ms
+        // Timer : 5 ms
         traversalByForLoop(getLinkedList(100000));
-            // Timer : 3287 ms
+        // Timer : 3287 ms
 
     }
 }

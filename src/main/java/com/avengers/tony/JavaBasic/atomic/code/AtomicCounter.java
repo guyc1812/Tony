@@ -10,12 +10,8 @@ public class AtomicCounter {
 
     private Integer k = 0;
 
-    public Integer getK() {
-        return k;
-    }
-
-    public Integer kPlusTwo(){
-        k=k+2;
+    public Integer kPlusTwo() {
+        k = k + 2;
         return k;
     }
 
@@ -45,23 +41,14 @@ public class AtomicCounter {
 
     public static void main(String[] args) {
         final AtomicCounter counter = new AtomicCounter();
-        ExecutorService service = Executors.newFixedThreadPool(30);
-        for (int i = 0; i < 30; i++) {
+        ExecutorService service = Executors.newFixedThreadPool(9);
+        for (int i = 0; i < 9; i++) {
             service.execute(() -> {
-//                System.out.println(Thread.currentThread().getName()+"\t k is -------> "+counter.increase(2));
-                System.out.println(Thread.currentThread().getName()+"\t k plus two -> "+counter.kPlusTwo());
+                System.out.println(Thread.currentThread().getName()+"\t atomic plus two -> "+counter.increase(2));
+//                System.out.println(Thread.currentThread().getName() + "\t k simple plus two -> " + counter.kPlusTwo());
             });
         }
         service.shutdown();
     }
 
 }
-
-
-
-//pool-1-thread-1	 k plus two -> 2
-//pool-1-thread-5	 k plus two -> 8
-//pool-1-thread-4	 k plus two -> 6
-//pool-1-thread-7	 k plus two -> 12
-//pool-1-thread-3	 k plus two -> 4
-//pool-1-thread-2	 k plus two -> 2

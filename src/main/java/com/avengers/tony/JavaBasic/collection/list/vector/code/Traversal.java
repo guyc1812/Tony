@@ -31,7 +31,7 @@ public class Traversal {
         Timer.start();
         Enumeration enu = vector.elements();
         while (enu.hasMoreElements()) {
-            int i = (int)enu.nextElement();
+            int i = (int) enu.nextElement();
         }
         Timer.end();
     }
@@ -40,7 +40,7 @@ public class Traversal {
     private static void traversalByForEach(Vector<Integer> vector) {
         if (vector == null) return;
         Timer.start();
-        for (Integer item : vector){
+        for (Integer item : vector) {
             int i = item;
         }
         Timer.end();

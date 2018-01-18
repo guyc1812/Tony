@@ -14,6 +14,17 @@ public class MultiThreads_Thread extends Thread {
         this.series = series;
     }
 
+    public static void main(String[] args) {
+        String series = "010203040506";
+        Semaphore sem = new Semaphore(1);
+        MultiThreads_Thread t1 = new MultiThreads_Thread(sem, "1", series);
+        MultiThreads_Thread t2 = new MultiThreads_Thread(sem, "2", series);
+        MultiThreads_Thread t3 = new MultiThreads_Thread(sem, "3", series);
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+
     public void run() {
         try {
             semaphore.acquire();
@@ -21,44 +32,39 @@ public class MultiThreads_Thread extends Thread {
             switch (threadName) {
                 case "1":
                     System.out.println(Thread.currentThread().getName() + " 线程运行开始!");
-                    for(int i=0;i<this.series.length();i++){
-                        int cur = Integer.parseInt(this.series.charAt(i)+"");
-                        if(cur==0){sb.append(cur);}
+                    for (int i = 0; i < this.series.length(); i++) {
+                        int cur = Integer.parseInt(this.series.charAt(i) + "");
+                        if (cur == 0) {
+                            sb.append(cur);
+                        }
                     }
-                    System.out.println("[thread]"+threadName+":"+sb.toString());
+                    System.out.println("[thread]" + threadName + ":" + sb.toString());
                     break;
                 case "2":
                     System.out.println(Thread.currentThread().getName() + " 线程运行开始!");
-                    for(int i=0;i<this.series.length();i++){
-                        int cur = Integer.parseInt(this.series.charAt(i)+"");
-                        if(cur%2==0&&cur!=0){sb.append(cur);}
+                    for (int i = 0; i < this.series.length(); i++) {
+                        int cur = Integer.parseInt(this.series.charAt(i) + "");
+                        if (cur % 2 == 0 && cur != 0) {
+                            sb.append(cur);
+                        }
                     }
-                    System.out.println("[thread]"+threadName+":"+sb.toString());
+                    System.out.println("[thread]" + threadName + ":" + sb.toString());
                     break;
                 case "3":
                     System.out.println(Thread.currentThread().getName() + " 线程运行开始!");
-                    for(int i=0;i<this.series.length();i++){
-                        int cur = Integer.parseInt(this.series.charAt(i)+"");
-                        if(cur%2!=0){sb.append(cur);}
+                    for (int i = 0; i < this.series.length(); i++) {
+                        int cur = Integer.parseInt(this.series.charAt(i) + "");
+                        if (cur % 2 != 0) {
+                            sb.append(cur);
+                        }
                     }
-                    System.out.println("[thread]"+threadName+":"+sb.toString());
+                    System.out.println("[thread]" + threadName + ":" + sb.toString());
                     break;
             }
             semaphore.release();
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        String series = "010203040506";
-        Semaphore sem = new Semaphore(1);
-        MultiThreads_Thread t1 = new MultiThreads_Thread(sem, "1",series);
-        MultiThreads_Thread t2 = new MultiThreads_Thread(sem, "2",series);
-        MultiThreads_Thread t3 = new MultiThreads_Thread(sem, "3",series);
-        t1.start();
-        t2.start();
-        t3.start();
     }
 
 }

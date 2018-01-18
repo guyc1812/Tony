@@ -5,12 +5,12 @@ package com.avengers.tony.JavaBasic.comparator.code;
  */
 public class AvengerNext extends Avenger implements Comparable<AvengerNext> {
 
-    AvengerNext(){
+    AvengerNext() {
         super();
     }
 
-    public AvengerNext(String name, int age){
-        super(name,age);
+    public AvengerNext(String name, int age) {
+        super(name, age);
     }
 
     public int compareTo(AvengerNext avenger) {

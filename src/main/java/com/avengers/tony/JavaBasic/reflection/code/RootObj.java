@@ -4,15 +4,15 @@ public class RootObj {
 
     private String rootField;
 
-    public RootObj()  {
+    public RootObj() {
         this.rootField = "This is root field";
     }
 
-    private RootObj(String text){   //note this is a private constructor
+    private RootObj(String text) {   //note this is a private constructor
         this.rootField = text;
     }
 
-    public void rootMethod1()  {
+    public void rootMethod1() {
         System.out.println("This is root method1(public)");
     }
 

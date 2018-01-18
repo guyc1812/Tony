@@ -93,7 +93,7 @@ Proxy classes can implement many things in a convenient way without modifying th
     }
     ```
 
-* Test
+* Demo Test
 
     ```
     @Test

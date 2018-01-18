@@ -14,9 +14,9 @@ public class ComparatorUsage {
     /**
      * JAVA 7
      * Comparator<Avenger> ComparatorDemo = new Comparator<Avenger>(){
-     *     public int compare(UTRSuite a1, UTRSuite a2) {
-     *         return a1.getName().compareTo(a2.getName());
-     *     }
+     * public int compare(UTRSuite a1, UTRSuite a2) {
+     * return a1.getName().compareTo(a2.getName());
+     * }
      * };
      * <p>
      * JAVA 8
@@ -55,12 +55,12 @@ public class ComparatorUsage {
 
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // usage in treeSet
         TreeSet<Avenger> treeSet = new TreeSet<>(Comparator.comparing(Avenger::getName));
         // usage in treeMap
-        TreeMap<Avenger,String> treeMap = new TreeMap<>(Comparator.comparing(Avenger::getName));
+        TreeMap<Avenger, String> treeMap = new TreeMap<>(Comparator.comparing(Avenger::getName));
 
         Avenger IronMan = new Avenger("Tony", 40);
         Avenger Hulk = new Avenger("Banner", 44);

@@ -15,13 +15,13 @@ public class HashSetDemo {
         set.add("e");
 
         // traversal -1
-        for(Iterator iterator = set.iterator(); iterator.hasNext(); ) {
+        for (Iterator iterator = set.iterator(); iterator.hasNext(); ) {
             System.out.printf("iterator : %s\n", iterator.next());
         }
 
         // traversal -2
-        String[] arr = (String[])set.toArray(new String[0]);
-        for (String str:arr){
+        String[] arr = (String[]) set.toArray(new String[0]);
+        for (String str : arr) {
             System.out.printf("for each : %s\n", str);
         }
 
@@ -40,20 +40,20 @@ public class HashSetDemo {
         otherset.add("f");
 
         // set.clone()
-        HashSet removeset = (HashSet)set.clone();
+        HashSet removeset = (HashSet) set.clone();
 
         // removeAll()
         removeset.removeAll(otherset);
         System.out.printf("removeset : %s\n", removeset);
 
-        HashSet retainset = (HashSet)set.clone();
+        HashSet retainset = (HashSet) set.clone();
 
         // retainAll()
         retainset.retainAll(otherset);
         System.out.printf("retainset : %s\n", retainset);
 
         set.clear();
-        System.out.printf("%s\n", set.isEmpty()?"set is empty":"set is not empty");
+        System.out.printf("%s\n", set.isEmpty() ? "set is empty" : "set is not empty");
 
     }
 

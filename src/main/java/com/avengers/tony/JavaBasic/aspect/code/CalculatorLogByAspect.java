@@ -1,7 +1,6 @@
 package com.avengers.tony.JavaBasic.aspect.code;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -29,6 +28,7 @@ public class CalculatorLogByAspect {
 
     /**
      * if no @Pointcut =>
+     *
      * @Before("execution(public int com.tony.example.aspect.CalculatorImpl.*(int, int))")
      */
     @Before("declareJointPointExpression()")

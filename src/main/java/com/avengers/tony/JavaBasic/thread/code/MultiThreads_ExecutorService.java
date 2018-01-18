@@ -22,10 +22,18 @@ public class MultiThreads_ExecutorService {
         ExecutorService executorService4 = Executors.newCachedThreadPool();
 
         // A Runnable
-        Runnable run = new Runnable() {public void run() { System.out.println("Runnable-Result");}};
+        Runnable run = new Runnable() {
+            public void run() {
+                System.out.println("Runnable-Result");
+            }
+        };
 
         // A Callable
-        Callable call = new Callable(){public Object call() throws Exception{ return "Callable-Result";}};
+        Callable call = new Callable() {
+            public Object call() throws Exception {
+                return "Callable-Result";
+            }
+        };
 
         // A linkedList of Callable
         Set<Callable<String>> callables = new HashSet<>();
@@ -37,36 +45,36 @@ public class MultiThreads_ExecutorService {
         executorService1.execute(run);
 
         // submit(Runnable)
-        try{
+        try {
             Future future1 = executorService1.submit(run);
             System.out.println("future.get = " + future1.get());  //returns null if the task has finished correctly.
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         // submit(Callable)
-        try{
+        try {
             Future future2 = executorService1.submit(call);
             System.out.println("future.get = " + future2.get());  //returns Callable result if the task has finished correctly.
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         // invokeAny(Callable)
-        try{
+        try {
             String result = executorService1.invokeAny(callables);
             System.out.println("result = " + result);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         // invokeAll(callables)
-        try{
+        try {
             List<Future<String>> futures = executorService1.invokeAll(callables);
-            for(Future<String> future : futures){
+            for (Future<String> future : futures) {
                 System.out.println("future.get = " + future.get());
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

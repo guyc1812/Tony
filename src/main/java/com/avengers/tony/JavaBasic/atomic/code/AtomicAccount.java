@@ -1,6 +1,5 @@
 package com.avengers.tony.JavaBasic.atomic.code;
 
-import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicLong;
@@ -19,30 +18,35 @@ public class AtomicAccount {
     }
 
     public void withdraw(long money) {
-        while (true) {//保证即时同一时间有人也在取款也可以再次尝试取款，如果不需要并发尝试取款，可以去掉这句
+        // every thread can withdraw successfully with while (true)
+        // only one thread will withdraw successfully when removing while (true)
+        while (true) {
             long oldValue = balance.get();
             if (oldValue < money) {
-                System.out.println(Thread.currentThread().getName() + " 余额不足！ 余额：" + balance);
+                System.out.println(Thread.currentThread().getName() + " Insufficient! balance: " + balance);
                 break;
-//                return;
             }
-            try {Thread.sleep(500);} catch (Exception ignored) { }// 模拟取款时间
+            try {
+                Thread.sleep(500);
+            } catch (Exception ignored) {
+            }
             if (balance.compareAndSet(oldValue, oldValue - money)) {
-                System.out.println(Thread.currentThread().getName() + " 取款 " + money + " 成功！ 余额：" + balance);
+                System.out.println(Thread.currentThread().getName() + " Withdraw " + money + " successfully!  balance: " + balance);
                 break;
-//                return;
             }
-            System.out.println(Thread.currentThread().getName() + " 遇到并发，再次尝试取款！");
+            System.out.println(Thread.currentThread().getName() + " Blocked, try again");
         }
     }
 
     public static void main(String[] args) {
-        final AtomicAccount account = new AtomicAccount(3000);
-        ExecutorService service = Executors.newFixedThreadPool(30);
-        for (int i = 0; i < 30; i++) {
+        final AtomicAccount account = new AtomicAccount(900);
+        ExecutorService service = Executors.newFixedThreadPool(9);
+        for (int i = 1; i < 10; i++) {
             service.execute(() -> account.withdraw(100));
         }
         service.shutdown();
     }
 
 }
+
+

@@ -6,21 +6,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ReentrantLockDemo {
 
-
-    public static void main(String[] args) {
-        ReentrantLock rel = new ReentrantLock();
-        ExecutorService pool = Executors.newFixedThreadPool(4);
-        Runnable w1 = new worker(rel, "worker-1");
-        Runnable w2 = new worker(rel, "worker-2");
-        Runnable w3 = new worker(rel, "worker-3");
-        Runnable w4 = new worker(rel, "worker-4");
-        pool.execute(w1);
-        pool.execute(w2);
-        pool.execute(w3);
-        pool.execute(w4);
-        pool.shutdown();
-    }
-
     static class worker implements Runnable {
         String name;
         ReentrantLock re;
@@ -30,9 +15,8 @@ public class ReentrantLockDemo {
             this.name = name;
         }
 
-        public void run()
+        public void run() {
 
-        {
             boolean done = false;
             while (!done) {
 
@@ -79,5 +63,19 @@ public class ReentrantLockDemo {
                 }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        ReentrantLock rel = new ReentrantLock();
+        ExecutorService pool = Executors.newFixedThreadPool(4);
+        Runnable w1 = new worker(rel, "worker-1");
+        Runnable w2 = new worker(rel, "worker-2");
+        Runnable w3 = new worker(rel, "worker-3");
+        Runnable w4 = new worker(rel, "worker-4");
+        pool.execute(w1);
+        pool.execute(w2);
+        pool.execute(w3);
+        pool.execute(w4);
+        pool.shutdown();
     }
 }

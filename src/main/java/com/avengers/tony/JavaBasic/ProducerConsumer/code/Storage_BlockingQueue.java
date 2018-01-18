@@ -23,9 +23,6 @@ public class Storage_BlockingQueue implements Storage {
                 e.printStackTrace();
             }
         }
-
-        System.out.println(list);
-        System.out.println(list.size());
         System.out.println(Thread.currentThread().getName() + "\t inventory: " + list.size() + "\t produced " + num);
     }
 
@@ -43,8 +40,6 @@ public class Storage_BlockingQueue implements Storage {
                 e.printStackTrace();
             }
         }
-        System.out.println(list);
-        System.out.println(list.size());
         System.out.println(Thread.currentThread().getName() + "\t inventory: " + list.size() + "\t consumed " + num);
     }
 

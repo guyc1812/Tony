@@ -23,17 +23,17 @@ public class TestDriven {
         Consumer c4 = new Consumer(storage, 10);
 
         p1.start();
-//        p2.start();
+        p2.start();
         p3.start();
-//        p4.start();
-//        p5.start();
-//        p6.start();
-//        p7.start();
+        p4.start();
+        p5.start();
+        p6.start();
+        p7.start();
 
-//        c1.start();
-//        c2.start();
+        c1.start();
+        c2.start();
         c3.start();
-//        c4.start();
+        c4.start();
     }
 
 }

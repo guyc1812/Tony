@@ -6,9 +6,34 @@ public class Thread_WaitSleep {
 
     private static Object obj = new Object();
 
-    static class WaitThread extends Thread{
+    public static void main(String[] args) {
 
-        public WaitThread(String name){
+        WaitThread t1 = new WaitThread("t1");
+        WaitThread t2 = new WaitThread("t2");
+        WaitThread t3 = new WaitThread("t3");
+
+        try {
+            Timer.start();
+            Thread.sleep(3000);
+            System.out.print(Thread.currentThread().getName() + " sleep for ");
+            Timer.end();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        t1.start();
+        t2.start();
+        t3.start();
+
+        synchronized (obj) {
+            System.out.println(Thread.currentThread().getName() + " notifyAll()");
+            obj.notifyAll();
+        }
+    }
+
+    static class WaitThread extends Thread {
+
+        public WaitThread(String name) {
             super(name);
             System.out.println("Thread " + name + " is created");
         }
@@ -26,29 +51,4 @@ public class Thread_WaitSleep {
         }
     }
 
-    public static void main(String[] args) {
-
-        WaitThread t1 = new WaitThread("t1");
-        WaitThread t2 = new WaitThread("t2");
-        WaitThread t3 = new WaitThread("t3");
-
-        try {
-            Timer.start();
-            Thread.sleep(3000);
-            System.out.print(Thread.currentThread().getName()+" sleep for ");
-            Timer.end();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        t1.start();
-        t2.start();
-        t3.start();
-
-        synchronized(obj) {
-            System.out.println(Thread.currentThread().getName()+" notifyAll()");
-            obj.notifyAll();
-        }
-    }
-    
 }

@@ -16,7 +16,7 @@ public class TreeSetUsage {
         tSet.add("ccc");
 
         // asc TreeSet
-        ascIteratorThroughIterator(tSet) ;
+        ascIteratorThroughIterator(tSet);
         // desc TreeSet
         descIteratorThroughIterator(tSet);
         // for-each
@@ -50,34 +50,34 @@ public class TreeSetUsage {
         tSet.remove("ccc");
 
         // to array
-        String[] arr = (String[])tSet.toArray(new String[0]);
-        for (String str:arr)
+        String[] arr = (String[]) tSet.toArray(new String[0]);
+        for (String str : arr)
             System.out.printf("for each : %s\n", str);
 
         System.out.printf("TreeSet:%s\n", tSet);
 
         // Iterator
-        for(Iterator iter = tSet.iterator(); iter.hasNext(); ) {
+        for (Iterator iter = tSet.iterator(); iter.hasNext(); ) {
             System.out.printf("iter : %s\n", iter.next());
         }
 
         // pollFirst
-        String val1 = (String)tSet.pollFirst();
+        String val1 = (String) tSet.pollFirst();
         System.out.printf("pollFirst=%s, set=%s\n", val1, tSet);
 
         // pollLast
-        String valn = (String)tSet.pollLast();
+        String valn = (String) tSet.pollLast();
         System.out.printf("pollLast=%s, set=%s\n", valn, tSet);
 
         tSet.clear();
 
-        System.out.printf("%s\n", tSet.isEmpty()?"set is empty":"set is not empty");
+        System.out.printf("%s\n", tSet.isEmpty() ? "set is empty" : "set is not empty");
     }
 
     // asc
     public static void ascIteratorThroughIterator(TreeSet set) {
         System.out.print("\n ---- Ascend Iterator ----\n");
-        for(Iterator iter = set.iterator(); iter.hasNext(); ) {
+        for (Iterator iter = set.iterator(); iter.hasNext(); ) {
             System.out.printf("asc : %s\n", iter.next());
         }
     }
@@ -85,15 +85,15 @@ public class TreeSetUsage {
     // desc
     public static void descIteratorThroughIterator(TreeSet set) {
         System.out.printf("\n ---- Descend Iterator ----\n");
-        for(Iterator iter = set.descendingIterator(); iter.hasNext(); )
-            System.out.printf("desc : %s\n", (String)iter.next());
+        for (Iterator iter = set.descendingIterator(); iter.hasNext(); )
+            System.out.printf("desc : %s\n", (String) iter.next());
     }
 
     // for-each
     private static void foreachTreeSet(TreeSet set) {
         System.out.printf("\n ---- For-each ----\n");
-        String[] arr = (String[])set.toArray(new String[0]);
-        for (String str:arr)
+        String[] arr = (String[]) set.toArray(new String[0]);
+        for (String str : arr)
             System.out.printf("for each : %s\n", str);
     }
 }

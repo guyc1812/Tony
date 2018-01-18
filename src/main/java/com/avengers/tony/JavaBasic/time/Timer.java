@@ -8,13 +8,13 @@ public class Timer {
     private static long start;
     private static long end;
 
-    public static void start(){
+    public static void start() {
         start = System.currentTimeMillis();
     }
 
-    public static void end(){
+    public static void end() {
         end = System.currentTimeMillis();
-        System.out.println("Timer : " + (end-start) + " ms");
+        System.out.println("Timer : " + (end - start) + " ms");
     }
 
 
