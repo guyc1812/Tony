@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 public class LinkedListUsage {
 
-
     private static void basicApi() {
 
         LinkedList linkedList = new LinkedList();
@@ -45,7 +44,6 @@ public class LinkedListUsage {
 
         linkedList.clear();
     }
-
 
     private static void stackApi() {
 

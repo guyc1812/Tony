@@ -1,11 +1,11 @@
 # Map
 
-* [Java Map](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/Map.md)
-* [HashMap](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashMap/HashMap.md)
-* [HashTable](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashTable/HashTable.md)
+* [Java Map](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/docs/Map.md)
+* [HashMap](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashMap/docs/HashMap.md)
+* [HashTable](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/hashTable/docs/HashTable.md)
 * TreeMap
-    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/treeMap/TreeMap.md)
-    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/treeMap/TreeMapUsage.md)
+    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/treeMap/docs/TreeMap.md)
+    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/map/treeMap/docs/TreeMapUsage.md)
 
 
 ### Construction

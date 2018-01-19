@@ -17,11 +17,11 @@ public class SynchronizedDriven {
         Thread t5 = new Thread(SynchronizedDemo::syncStatic);
 
 //        t0.start();
-        t1.start();
+//        t1.start();
 //        t2.start();
-        t3.start();
-//        t4.start();
-//        t5.start();
+//        t3.start();
+        t4.start();
+        t5.start();
 
     }
 }

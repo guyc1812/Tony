@@ -1,9 +1,10 @@
 # Lock
 
-* [Java Lock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/Lock.md)
-* [Volatile](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/Volatile.md)
-* [Synchronized](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/Synchronized.md)
-* [ReentrantLock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/ReentrantLock.md)
-* [ReentrantReadWriteLock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/ReentrantRDLock.md)
-* [StampLock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/StampedLock.md)
-* [Producer-Consumer](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/ProducerConsumer.md)
+* [Java Lock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/docs/Lock.md)
+* [Volatile](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/docs/Volatile.md)
+* Synchronized
+    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/docs/Synchronized.md)
+    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/docs/SynchronizedUsage.md)
+* [ReentrantLock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/docs/ReentrantLock.md)
+* [ReentrantReadWriteLock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/docs/ReentrantRWLock.md)
+* [StampLock](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/lock/docs/StampedLock.md)

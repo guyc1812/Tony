@@ -2,11 +2,11 @@
 
 * [Java Set](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/Set.md)
 * HashSet
-    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/hashSet/HashSet.md)
-    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/hashSet/HashSetUsage.md)
+    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/hashSet/docs/HashSet.md)
+    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/hashSet/docs/HashSetUsage.md)
 * TreeSet
-    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/treeSet/TreeSet.md)
-    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/treeSet/TreeSetUsage.md)
+    * [Basic](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/treeSet/docs/TreeSet.md)
+    * [Usage](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/collection/set/treeSet/docs/TreeSetUsage.md)
 
 
 ### Construction
