@@ -1,6 +1,6 @@
 package com.avengers.tony;
 
-import com.avengers.tony.config.CoreConfig;
+import com.avengers.Stark.config.CoreConfig;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
