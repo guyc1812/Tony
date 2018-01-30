@@ -11,7 +11,7 @@
                 {
                     "category": "Stark",
                     "title":    "Java virtual machine",
-                    "path":     "src/main/java/com/avengers/tony/JavaBasic/jvm/docs/Jvm.md",
+                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Jvm.md",
                     "nav":      "JVM-JavaVirtualMachine",
                     "status":   0,
                     "items":    []
