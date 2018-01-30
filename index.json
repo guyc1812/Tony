@@ -1,14 +1,14 @@
 {
-    "category"    : "Stark",
+    "category"    : "index",
     "index" : [
         {
-            "category": "javaBasic",
+            "category": "Stark",
             "title":    "JVM",
             "path":     "",
             "nav":      "",
             "items":    [
                 {
-                    "category": "javaBasic",
+                    "category": "Stark",
                     "title":    "Java virtual machine",
                     "path":     "https://github.com/guyc1812/Stark/blob/master/src/main/java/com/avengers/tony/JavaBasic/jvm/docs/Jvm.md",
                     "nav":      "JVM-JavaVirtualMachine",
