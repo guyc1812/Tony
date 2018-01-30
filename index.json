@@ -10,7 +10,7 @@
                 {
                     "category": "Stark",
                     "title":    "Java virtual machine",
-                    "path":     "https://github.com/guyc1812/Stark/blob/master/src/main/java/com/avengers/tony/JavaBasic/jvm/docs/Jvm.md",
+                    "path":     "src/main/java/com/avengers/tony/JavaBasic/jvm/docs/Jvm.md",
                     "nav":      "JVM-JavaVirtualMachine",
                     "items":    []
                 }
