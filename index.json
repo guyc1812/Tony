@@ -100,7 +100,7 @@
                                 },{
                                     "category": "Stark",
                                     "title":    "Traversal",
-                                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/arrayList/docs/Traversal.md",
+                                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/arrayList/docs/Traversal.md",
                                     "nav":      "Collection-List-JavaList-Traversal",
                                     "items":    []
                                 }
@@ -120,8 +120,8 @@
                                 },{
                                     "category": "Stark",
                                     "title":    "Usage",
-                                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/linkedList/docs/linkedListUsage.md",
-                                    "nav":      "Collection-List-LinkedList-Basic",
+                                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/linkedList/docs/LinkedListUsage.md",
+                                    "nav":      "Collection-List-LinkedList-Usage",
                                     "items":    []
                                 },{
                                     "category": "Stark",
@@ -378,7 +378,7 @@
                 {
                     "category": "Stark",
                     "title":    "Java Reflection",
-                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/Reflection/docs/Reflection.md",
+                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/reflection/docs/Reflection.md",
                     "nav":      "Reference-JavaReflection",
                     "items":    []
                 }
