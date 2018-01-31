@@ -6,30 +6,35 @@
             "title":    "JVM",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java virtual machine",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Jvm.md",
                     "nav":      "JVM-JavaVirtualMachine",
+                    "status":   310,
                     "items":    []
                 }, {
                     "category": "Stark",
                     "title":    "Conceptions",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Conceptions.md",
                     "nav":      "JVM-Conceptions",
+                    "status":   310,
                     "items":    []
                 }, {
                     "category": "Stark",
                     "title":    "Questions",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Questions.md",
                     "nav":      "JVM-Questions",
+                    "status":   310,
                     "items":    []
                 }, {
                     "category": "Stark",
                     "title":    "IOC",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Ioc.md",
                     "nav":      "JVM-IOC",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -38,12 +43,14 @@
             "title":    "String",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java String",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/string/docs/String.md",
                     "nav":      "String-JavaString",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -52,18 +59,21 @@
             "title":    "Aspect",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Dynamic Proxy",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/aspect/docs/Proxy.md",
                     "nav":      "Aspect-DynamicProxy",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "AspectJ",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/aspect/docs/AspectJ.md",
                     "nav":      "Aspect-AspectJ",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -72,36 +82,42 @@
             "title":    "Collection",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "List",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    [
                         {
                             "category": "Stark",
                             "title":    "Java List",
                             "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/List.md",
                             "nav":      "Collection-List-JavaList",
+                            "status":   310,
                             "items":    []
                         },{
                             "category": "Stark",
                             "title":    "ArrayList",
                             "path":     "",
                             "nav":      "",
+                            "status":   310,
                             "items":    [
                                 {
                                     "category": "Stark",
                                     "title":    "Basic",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/arrayList/docs/ArrayList.md",
                                     "nav":      "Collection-List-JavaList-Basic",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Traversal",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/arrayList/docs/Traversal.md",
                                     "nav":      "Collection-List-JavaList-Traversal",
+                                    "status":   310,
                                     "items":    []
                                 }
                             ]
@@ -110,24 +126,28 @@
                             "title":    "LinkedList",
                             "path":     "",
                             "nav":      "",
+                            "status":   310,
                             "items":    [
                                 {
                                     "category": "Stark",
                                     "title":    "Basic",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/linkedList/docs/LinkedList.md",
                                     "nav":      "Collection-List-LinkedList-Basic",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Usage",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/linkedList/docs/LinkedListUsage.md",
                                     "nav":      "Collection-List-LinkedList-Usage",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Traversal",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/linkedList/docs/Traversal.md",
                                     "nav":      "Collection-List-LinkedList-Traversal",
+                                    "status":   310,
                                     "items":    []
                                 }
                             ]
@@ -136,24 +156,28 @@
                             "title":    "Vector",
                             "path":     "",
                             "nav":      "",
+                            "status":   310,
                             "items":    [
                                 {
                                     "category": "Stark",
                                     "title":    "Basic",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/vector/docs/Vector.md",
                                     "nav":      "Collection-List-Vector-Basic",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Usage",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/vector/docs/VectorUsage.md",
                                     "nav":      "Collection-List-Vector-Basic",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Traversal",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/list/vector/docs/Traversal.md",
                                     "nav":      "Collection-List-Vector-Traversal",
+                                    "status":   310,
                                     "items":    []
                                 }
                             ]
@@ -164,42 +188,49 @@
                     "title":    "Map",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    [
                         {
                             "category": "Stark",
                             "title":    "Java Map",
                             "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/map/Map.md",
                             "nav":      "Collection-Map-JavaMap",
+                            "status":   310,
                             "items":    []
                         }, {
                             "category": "Stark",
                             "title":    "HashMap",
                             "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/map/hashMap/docs/HashMap.md",
                             "nav":      "Collection-Map-HashMap",
+                            "status":   310,
                             "items":    []
                         }, {
                             "category": "Stark",
                             "title":    "HashTable",
                             "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/map/hashTable/docs/HashTable.md",
                             "nav":      "Collection-Map-HashTable",
+                            "status":   310,
                             "items":    []
                         }, {
                             "category": "Stark",
                             "title":    "TreeMap",
                             "path":     "",
                             "nav":      "",
+                            "status":   310,
                             "items":    [
                                 {
                                     "category": "Stark",
                                     "title":    "Basic",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/map/treeMap/docs/TreeMap.md",
                                     "nav":      "Collection-Map-TreeMap-Basic",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Usage",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/map/treeMap/docs/TreeMapUsage.md",
                                     "nav":      "Collection-Map-TreeMap-Usage",
+                                    "status":   310,
                                     "items":    []
                                 }
                             ]
@@ -210,30 +241,35 @@
                     "title":    "Set",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    [
                         {
                             "category": "Stark",
                             "title":    "Java Set",
                             "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/set/Set.md",
                             "nav":      "Collection-Set-JavaSet",
+                            "status":   310,
                             "items":    []
                         }, {
                             "category": "Stark",
                             "title":    "HashSet",
                             "path":     "",
                             "nav":      "",
+                            "status":   310,
                             "items":    [
                                 {
                                     "category": "Stark",
                                     "title":    "Basic",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/set/hashSet/docs/HashSet.md",
                                     "nav":      "Collection-Set-HashSet-Basic",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Usage",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/set/hashSet/docs/HashSetUsage.md",
                                     "nav":      "Collection-Set-HashSet-Usage",
+                                    "status":   310,
                                     "items":    []
                                 }
                             ]
@@ -242,18 +278,21 @@
                             "title":    "TreeSet",
                             "path":     "",
                             "nav":      "",
+                            "status":   310,
                             "items":    [
                                 {
                                     "category": "Stark",
                                     "title":    "Basic",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/set/treeSet/docs/TreeSet.md",
                                     "nav":      "Collection-Set-TreeSet-Basic",
+                                    "status":   310,
                                     "items":    []
                                 },{
                                     "category": "Stark",
                                     "title":    "Usage",
                                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/set/treeSet/docs/TreeSetUsage.md",
                                     "nav":      "Collection-Set-TreeSet-Usage",
+                                    "status":   310,
                                     "items":    []
                                 }
                             ]
@@ -264,12 +303,14 @@
                     "title":    "Fail-Fast",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/collections/docs/fail-fast.md",
                     "nav":      "Collection-FailFast",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Collection Conversion",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/collection/collections/docs/collectionConvert.md",
                     "nav":      "Collection-Conversion",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -278,36 +319,42 @@
             "title":    "Concurrent Collection",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "CopyOnWriteArrayList",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "CopyOnWriteArraySet",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "ConcurrentSkipListSet",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "ConcurrentHashMap",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "ConcurrentSkipListMap",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -316,18 +363,21 @@
             "title":    "Comparator",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Comparator",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/comparator/docs/Comparator.md",
                     "nav":      "Comparator-Comparator",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Comparable",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/comparator/docs/Comparable.md",
                     "nav":      "Comparator-Comparable",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -336,36 +386,42 @@
             "title":    "Reference",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java Reference",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/reference/docs/Reference.md",
                     "nav":      "Reference-JavaReference",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Island of Isolation",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/reference/docs/IslandOfIsolation.md",
                     "nav":      "Reference-IslandofIsolation",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Ways for Garbage Collection",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/reference/docs/WaysForGC.md",
                     "nav":      "Reference-WaysforGarbageCollection",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Garbage Collection",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/reference/docs/GarbageCollection.md",
                     "nav":      "Reference-GarbageCollection",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Daemon Thread",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/reference/docs/DaemonThread.md",
                     "nav":      "Reference-DaemonThread",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -374,12 +430,14 @@
             "title":    "Reflection",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java Reflection",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/reflection/docs/Reflection.md",
                     "nav":      "Reference-JavaReflection",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -388,60 +446,70 @@
             "title":    "Thread",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java Thread",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/Thread.md",
                     "nav":      "Thread-JavaThread",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Threads With Thread Class",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/MultiThreads_Thread.md",
                     "nav":      "Thread-ThreadsWithThreadClass",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Threads With Runnable Interface",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/MultiThreads_Runnable.md",
                     "nav":      "Thread-ThreadsWithRunnableInterface",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Threads With ExecutorService",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/MultiThreads_ExecutorService.md",
                     "nav":      "Thread-ThreadsWithExecutorService",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Semaphore",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/Semaphore.md",
                     "nav":      "Thread-Semaphore",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Thread Run and Start method",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/Thread_Start_Run.md",
                     "nav":      "Thread-ThreadRunandStartmethod",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Thread Join",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/Thread_Join.md",
                     "nav":      "Thread-ThreadJoin",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Thread Yield",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/Thread_Yield.md",
                     "nav":      "Thread-ThreadYield",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Thread Wait and Sleep",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/thread/docs/Thread_WaitSleep.md",
                     "nav":      "Thread-ThreadWaitandSleep",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -450,36 +518,42 @@
             "title":    "Lock",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java Lock",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/lock/docs/Lock.md",
                     "nav":      "Lock-JavaLock",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Volatile",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/lock/docs/Volatile.md",
                     "nav":      "Lock-Volatile",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Synchronized",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    [
                         {
                             "category": "Stark",
                             "title":    "Basic",
                             "path":     "src/main/java/com/avengers/Stark/JavaBasic/lock/docs/Synchronized.md",
                             "nav":      "Lock-Synchronized-Basic",
+                            "status":   310,
                             "items":    []
                         },{
                             "category": "Stark",
                             "title":    "Usage",
                             "path":     "src/main/java/com/avengers/Stark/JavaBasic/lock/docs/SynchronizedUsage.md",
                             "nav":      "Lock-Synchronized-Usage",
+                            "status":   310,
                             "items":    []
                         }
                     ]
@@ -488,18 +562,21 @@
                     "title":    "ReentrantLock",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/lock/docs/ReentrantLock.md",
                     "nav":      "Lock-ReentrantLock",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "ReentrantReadWriteLock",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/lock/docs/ReentrantRWLock.md",
                     "nav":      "Lock-ReentrantReadWriteLock",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "StampLock",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/lock/docs/StampedLock.md",
                     "nav":      "Lock-StampLock",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -508,24 +585,28 @@
             "title":    "Atomic",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Atomic - Counter",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/atomic/docs/AtomicCounter.md",
                     "nav":      "Atomic-Counter",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Atomic - Account",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/atomic/docs/AtomicAccount.md",
                     "nav":      "Atomic-Account",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Atomic - Stack",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/atomic/docs/AtomicStack.md",
                     "nav":      "Atomic-Stack",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -534,24 +615,28 @@
             "title":    "Producer and Consumer",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "By await() and signal()",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/ProducerConsumer/docs/StorageAwaitSignal.md",
                     "nav":      "ProducerAndConsumer-ByAwaitAndSignal",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "By wait() and notify()",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/ProducerConsumer/docs/StorageWaitNotify.md",
                     "nav":      "ProducerAndConsumer-ByWaitAndNotify",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "By BlockingQueue",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/ProducerConsumer/docs/StorageBlockingQueue.md",
                     "nav":      "ProducerAndConsumer-ByBlockingQueue",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -560,12 +645,14 @@
             "title":    "Enums",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java Enums",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/enums/docs/Enum.md",
                     "nav":      "Enums-JavaEnums",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -574,24 +661,28 @@
             "title":    "IO",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Input",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Output",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 },{
                     "category": "Stark",
                     "title":    "Serializable",
                     "path":     "",
                     "nav":      "",
+                    "status":   310,
                     "items":    []
                 }
             ]
@@ -600,12 +691,14 @@
             "title":    "Exception",
             "path":     "",
             "nav":      "",
+            "status":   310,
             "items":    [
                 {
                     "category": "Stark",
                     "title":    "Java Exception",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/exception/docs/Exception.md",
                     "nav":      "Enums-JavaException",
+                    "status":   310,
                     "items":    []
                 }
             ]
