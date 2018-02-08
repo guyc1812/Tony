@@ -83,7 +83,7 @@ LAMP (Linux + Apache + MySQL + PHP) 或  LNMP (Linux + Nginx+ MySQL + PHP)
 
 ### linux目录结构
 
-![linuxDirs](../imgs/linuxDirs.png)
+![linuxDirs](http://guyuchen.com/deadpool/github/linuxDirs.png)
 
 * /   根目录
 * etc 系统配置文件存放的目录
