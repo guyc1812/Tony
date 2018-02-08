@@ -176,7 +176,7 @@ The key unit of modularity in OOP is the class, whereas in AOP the unit of modul
 
 ### Spring AOP vs AspectJ
 
-![Spring AOP vs AspectJ](../../../imgs/SpringAopVSAspectJ.png)
+![Spring AOP vs AspectJ](http://guyuchen.com/deadpool/github/SpringAopVSAspectJ.png)
 
 
 ### Reference:
