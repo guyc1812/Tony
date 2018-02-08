@@ -1,6 +1,6 @@
 # String Pool
 
-![image](../../../imgs/String-Pool.png)
+![image](http://guyuchen.com/deadpool/github/String-Pool.png)
 
 String Pool is possible only because String is immutable in Java and it’s implementation of String interning concept. 
 
