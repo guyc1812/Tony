@@ -2,7 +2,7 @@
 
 ### Summary
 
-![Exception](../../../imgs/exception.png)
+![Exception](http://guyuchen.com/deadpool/github/exception.png)
 
 ### Different between throw and throws
 
