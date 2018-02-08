@@ -13,6 +13,6 @@
 
 ### States
 
-![States](../../imgs/thread-life-cycle-in-java-flowchart.gif)
+![States](http://guyuchen.com/deadpool/github/thread-life-cycle-in-java-flowchart.gif)
 
-![States](../../imgs/thread_status.jpg)
+![States](http://guyuchen.com/deadpool/github/thread_status.jpg)
