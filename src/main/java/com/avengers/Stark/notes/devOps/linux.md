@@ -5,7 +5,7 @@ LAMP (Linux + Apache + MySQL + PHP) 或  LNMP (Linux + Nginx+ MySQL + PHP)
 
 ### linux 启动：
 
-![linuxBootStrap](../imgs/linuxBootStrap.png)
+![linuxBootStrap](http://guyuchen.com/deadpool/github/linuxBootStrap.png)
 
 1. BIOS
 
