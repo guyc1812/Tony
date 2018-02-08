@@ -1,7 +1,7 @@
 # JVM
 
 
-![image](../../../imgs/Java-JVM-Tuning-Crunchify-Tips.png)
+![image](http://guyuchen.com/deadpool/github/Java-JVM-Tuning-Crunchify-Tips.png)
 
 
 ### Heap Size:
@@ -12,7 +12,7 @@ Whenever we create object using new operator or by any another means, <br>
 object is allocated memory from Heap and When object dies or garbage collected, <br>
 memory goes back to Heap space in Java.
 
-![image](../../../imgs/jvm.png)
+![image](http://guyuchen.com/deadpool/github/jvm.png)
 
 JVM option Meaning<br>
 * -Xms	initial java heap size
