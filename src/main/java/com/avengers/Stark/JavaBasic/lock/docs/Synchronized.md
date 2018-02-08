@@ -19,7 +19,7 @@
 * The JVM uses locks in conjunction with monitors. <br>
 * Each monitor is associated with an object reference. 
 
-![monitor](../../../imgs/java-monitor.gif)
+![monitor](http://guyuchen.com/deadpool/github/java-monitor.gif)
 
 
 ### Synchronized blocks
