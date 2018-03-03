@@ -2,7 +2,7 @@
 
 ### Demo
 
-```
+```java
 public class AtomicStack<T> {
 
     private AtomicReference<Node<T>> stacks = new AtomicReference<Node<T>>();
@@ -46,7 +46,7 @@ public class AtomicStack<T> {
 
 ### Demo Test
 
-```
+```java
 public static void main(String[] args){
     AtomicStack stack = new AtomicStack();
     ExecutorService service = Executors.newFixedThreadPool(6);
@@ -61,7 +61,7 @@ public static void main(String[] args){
 
 ### Output
 
-``` 
+```bash
 pool-1-thread-4 a
 pool-1-thread-5 b
 pool-1-thread-6 c

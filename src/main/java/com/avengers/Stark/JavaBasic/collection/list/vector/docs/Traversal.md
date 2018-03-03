@@ -2,7 +2,7 @@
 
 ### Get Vector
 
-```
+```java
 private static Vector getVector(int num) {
     Vector<Integer> vector = new Vector<>();
     for (int i = 0; i < num; i++) vector.add(i);
@@ -12,7 +12,7 @@ private static Vector getVector(int num) {
 
 ### Traversal
 
-```
+```java
 /* Traversal By Iterator */
 private static void traversalByIterator(Vector<Integer> vector) {
     if (vector == null) return;
@@ -58,7 +58,7 @@ private static void traversalByForLoop(Vector<Integer> vector) {
 
 ### Test
 
-```
+```java
 public static void main(String[] args) {
 
     traversalByIterator(getVector(100000));

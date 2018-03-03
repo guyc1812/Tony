@@ -2,7 +2,7 @@
 
 ### Demo
 
-```
+```java
 public class AtomicAccount {
 
     private AtomicLong balance;
@@ -42,7 +42,7 @@ public class AtomicAccount {
 
 ### Demo Test
 
-```
+```java
 public static void main(String[] args) {
     final AtomicAccount account = new AtomicAccount(900);
     ExecutorService service = Executors.newFixedThreadPool(9);
@@ -55,7 +55,7 @@ public static void main(String[] args) {
 
 ### Output
 
-```
+```bash
 Total Money:900
 pool-1-thread-1 Blocked, try again
 pool-1-thread-4 Withdraw 100 successfully!  balance: 800

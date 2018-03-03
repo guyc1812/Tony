@@ -2,15 +2,18 @@
 
 1. Basic Enum
 
-    ```
     UserStatus.java
+    ```java
     public enum UserStatus {
         PENDING,
         ACTIVE,
         INACTIVE,
         DELETED;
     }
+    ```
+    
     Test.java
+    ```java
     public class Test {
     
         public static void main(String[] args) {
@@ -25,9 +28,10 @@
  
 2. Enum + Instance field
 
-    ```
+    ```java
     //WhoisRIR.java
     public enum WhoisRIR {
+    
         ARIN("whois.arin.net"),
         RIPE("whois.ripe.net"),
         APNIC("whois.apnic.net"),
@@ -51,22 +55,19 @@
     
     //Test.java
     public class Test {
-    
         public static void main(String[] args) {
-    
             //whois.arin.net
             System.out.println(WhoisRIR.ARIN.url());
-    
         }
-    
     }
     ```
  
 3. Enum + Method + Some logic
 
-    ```
+    ```java
     //Operation.java
     public enum Operation {
+    
         PLUS,
         MINUS,
         TIMES,
@@ -90,14 +91,10 @@
     }
     //Test.java
     public class Test {
-    
         public static void main(String[] args) {
-    
             double result = Operation.PLUS.calculate(1, 2);
             System.out.println(result); //3.0
-    
         }
-    
     }
     ```
 
@@ -105,21 +102,18 @@
 
 * To loop a Enum object.
 
-    ```
+    ```java
     public class Test {
-
         public static void main(String[] args) {
-
             for (UserStatus status : UserStatus.values()) {
                 System.out.println(status);
             }
-
         }
-
     }
+    ```
     
     Output:
-
+    ```bash
     PENDING
     ACTIVE
     INACTIVE
@@ -128,7 +122,7 @@
 
 * To compare the Enum values, use == operator.
 
-    ```
+    ```java
     public class Test {
 
         public static void main(String[] args) {
@@ -142,15 +136,16 @@
         }
 
     }
-
+    ```
+    
     Output:
-
+    ```bash
     This is APNIC : whois.apnic.net
     ```
 
 * Switch case.
 
-    ```
+    ```java
     public class Test {
 
         public static void main(String[] args) {
@@ -174,28 +169,28 @@
 
         }
     }
+    ```
 
     Output
-
+    ```bash
     This is RIPE
     ```
 
 * Convert a String to Enum object.
 
-    ```
+    ```java
     public class Test {
-
         public static void main(String[] args) {
-
             //enum valueOf + uppercase
             Operation op = Operation.valueOf("times".toUpperCase());
             System.out.println(op.calculate(10, 3));
-
         }
     }
-
-    // Output:
-    // 30.0
+    ```
+    
+    Output:
+    ```bash
+    30.0
     ```
     
     

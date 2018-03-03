@@ -2,7 +2,7 @@
 
 * Java-7
 
-    ```
+    ```java
     Comparator<Avenger> ComparatorDemo = new Comparator<Avenger>(){
         public int compare(UTRSuite a1, UTRSuite a2) {
             return a1.getName().compareTo(a2.getName());
@@ -12,14 +12,14 @@
     
 * Java-8 with lambda
 
-    ```
+    ```java
     Comparator<Avenger> comparatorByName 
         = Comparator.comparing(Avenger::getName);
     ```
     
 * Comparator in list
 
-    ```
+    ```java
     public List<Avenger> AvengersByName(List<Avenger> avengers) {
         Comparator<Avenger> comparatorByName = Comparator.comparing(Avenger::getName);
         avengers.sort(comparatorByName);
@@ -48,14 +48,14 @@
 
 * Comparator in TreeSet
 
-    ```
+    ```java
     TreeSet<Avenger> treeSet = new TreeSet<>(Comparator.comparing(Avenger::getName));
     ```
 
 
 * Comparator in TreeMap
 
-    ```
+    ```java
     TreeMap<Avenger,String> treeMap = new TreeMap<>(Comparator.comparing(Avenger::getName));
     ```
     

@@ -15,7 +15,7 @@
 
 ### Demo
 
-```
+```java
 public static void main(String[] args) {
 
     ExecutorService executor = Executors.newFixedThreadPool(10);
@@ -73,7 +73,7 @@ public static void main(String[] args) {
 
 ### Demo Test
 
-```
+```bash
 pool-1-thread-1  stamp: 384 writing
 pool-1-thread-2  stamp: 513 reading: bar
 pool-1-thread-3  stamp: 515 reading: bar
@@ -87,7 +87,7 @@ pool-1-thread-9  stamp: 770 reading: bar
 
 ### Demo For Optimistic
 
-```
+```java
 public static void main(String[] args) {
 
     ExecutorService executor = Executors.newFixedThreadPool(2);
@@ -141,7 +141,7 @@ public static void main(String[] args) {
 
 ### Demo Test For Optimistic
 
-```
+```bash
 Optimistic Lock Valid: true
 Write Lock acquired
 Optimistic Lock Valid: false

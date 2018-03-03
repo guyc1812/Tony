@@ -9,7 +9,7 @@
 * get(), set(), iterator(), ListIterator() operation runs in amortized constant time O(n).
 * Use fail-fast iterators.
 * No thread safe.
-```
+```java
 List list = Collections.synchronizedList(new LinkedList(...));
 ```
 
@@ -17,14 +17,14 @@ List list = Collections.synchronizedList(new LinkedList(...));
 
 * Data Structure
 
-    ```
+    ```java
     transient Node<E> first;
     transient Node<E> last;
     ```
 
 * Constructor
 
-    ```
+    ```java
     public LinkedList() {}
     
     public LinkedList(Collection<? extends E> c) {
@@ -35,7 +35,7 @@ List list = Collections.synchronizedList(new LinkedList(...));
 
 * Basic Operations
 
-    ```
+    ```java
     public int size()
     public boolean contains(Object o)
     
@@ -87,7 +87,7 @@ List list = Collections.synchronizedList(new LinkedList(...));
 
 * Iterator
 
-    ```
+    ```java
     public ListIterator<E> listIterator(int index)
     public Iterator<E> descendingIterator()
     ```
@@ -95,7 +95,7 @@ List list = Collections.synchronizedList(new LinkedList(...));
     
 ### Crucial operations
 
-```
+```java
 /**
  * Links e as first element.
  */

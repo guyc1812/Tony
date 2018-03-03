@@ -4,7 +4,7 @@ not a good idea!
 
 ### Demo
 
-```
+```java
 public class Storage_BlockingQueue implements Storage {
 
     private final int MAX_SIZE = 100;

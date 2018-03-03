@@ -47,7 +47,7 @@
     
     defaultHandler: throws `RejectedExecutionException` always
 
-    ```
+    ```java
     public ThreadPoolExecutor(
         int corePoolSize,
         int maximumPoolSize,
@@ -64,7 +64,7 @@
 
 * `ExecutorService executorService1 = Executors.newSingleThreadExecutor();`
     
-    ```
+    ```java
     public static ExecutorService newSingleThreadExecutor() {
         return new FinalizableDelegatedExecutorService(
             new ThreadPoolExecutor(
@@ -93,7 +93,7 @@
 
 * `ExecutorService executorService2 = Executors.newFixedThreadPool(10);`
 
-    ```
+    ```java
     public static ExecutorService newFixedThreadPool(int nThreads) {
         return new ThreadPoolExecutor(
             nThreads, 
@@ -116,7 +116,7 @@
 
 * `ExecutorService executorService3 = Executors.newScheduledThreadPool(10);`
 
-    ```
+    ```java
     public static ScheduledExecutorService newScheduledThreadPool(int corePoolSize) {
         return super(corePoolSize, Integer.MAX_VALUE, 0, NANOSECONDS,
                              new DelayedWorkQueue());
@@ -130,7 +130,7 @@
 
 * `ExecutorService executorService4 = Executors.newCachedThreadPool();`
 
-    ```
+    ```java
     public static ExecutorService newCachedThreadPool() {
         return new ThreadPoolExecutor(
             0, 
@@ -155,7 +155,7 @@
 
 ### ScheduledExecutorService
 
-```
+```java
 schedule(Runnable command, long delay, TimeUnit unit);
 schedule(Callable<V> callable, long delay, TimeUnit unit);
 scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit);

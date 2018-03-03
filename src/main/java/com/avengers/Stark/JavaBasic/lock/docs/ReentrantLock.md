@@ -42,7 +42,7 @@
 
 ### Demo
 
-```
+```java
 static class worker implements Runnable {
     String name;
     ReentrantLock re;
@@ -105,7 +105,7 @@ static class worker implements Runnable {
 
 Test
 
-```
+```java
 public static void main(String[] args) {
     ReentrantLock rel = new ReentrantLock();
     ExecutorService pool = Executors.newFixedThreadPool(4);
@@ -123,7 +123,7 @@ public static void main(String[] args) {
 
 Output:
 
-```
+```bash
 worker-1 is in
 worker-1 is working on job-1
 worker-1 is holding lock count-1

@@ -2,7 +2,7 @@
 
 ### Demo
 
-```
+```java
 public class SynchronizedDemo {
 
     // no Synchronized
@@ -72,7 +72,7 @@ public class SynchronizedDemo {
 
 ### Demo Test
 
-```
+```java
 public static void main(String[] args) {
 
     SynchronizedDemo sd = new SynchronizedDemo();
@@ -96,7 +96,7 @@ public static void main(String[] args) {
 
 ### Output: Synchronized Method & Synchronized Method
 
-```
+```bash
 Thread-1	 count is 0     # Synchronized Method
 Thread-1	 count is 1
 Thread-1	 count is 2
@@ -111,7 +111,7 @@ Thread-0	 count is 4
 
 ### Output: Synchronized Method & Synchronized Block
 
-```
+```bash
 Thread-0	 count is 0     # Synchronized Method
 Thread-0	 count is 1
 Thread-0	 count is 2
@@ -126,7 +126,7 @@ Thread-2	 count is 4
 
 ### Output: Synchronized Method & Synchronized Static
 
-```
+```bash
 Thread-4	 count is 0     # Synchronized Static
 Thread-0	 count is 0     # Synchronized Method
 Thread-0	 count is 1
@@ -141,7 +141,7 @@ Thread-4	 count is 4
 
 ### Output: Synchronized Block & Synchronized Static
 
-```
+```bash
 Thread-2	 count is 0     # Synchronized Block
 Thread-4	 count is 0     # Synchronized Static
 Thread-4	 count is 1
@@ -156,7 +156,7 @@ Thread-2	 count is 4
 
 ### Output: Synchronized Static & Synchronized Static
 
-```
+```bash
 Thread-5	 count is 0     # Synchronized Static
 Thread-5	 count is 1
 Thread-5	 count is 2

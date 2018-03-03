@@ -8,14 +8,14 @@
 * Provides constant-time performance for the basic operations get(), put()
 * Use fail-fast iterators.
 * No thread safe
-    ```
+    ```java
     Map m = Collections.synchronizedMap(new HashMap(...))
     ```
 
 
 ### CAPACITY and LOAD_FACTOR
 
-```
+```java
 static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
 static final float DEFAULT_LOAD_FACTOR = 0.75f;
 ```
@@ -32,7 +32,8 @@ As a general rule, the default load factor (.75) offers a good tradeOff between 
 threshold = CAPACITY * LOAD_FACTOR
 
 ### Data Structure
-```
+
+```java
 transient Node<K,V>[] table;
 
 Node<K,V> implements Map.Entry<K,V> {
@@ -46,7 +47,7 @@ Node<K,V> implements Map.Entry<K,V> {
 
 ### Constructor
 
-```
+```java
 public HashMap(int initialCapacity, float loadFactor) {
     if (initialCapacity < 0)
         throw new IllegalArgumentException("Illegal initial capacity: " +
@@ -77,7 +78,7 @@ public HashMap(Map<? extends K, ? extends V> m) {
 
 ### apis
 
-```
+```java
 public int size()
 public boolean isEmpty()
 public V get(Object key)
@@ -119,7 +120,7 @@ public Object clone()
 
 ### Iterator
 
-```
+```java
 // traversal of entrySet
 Iterator iter1 = map.entrySet().iterator();
 while (iter1.hasNext()) {

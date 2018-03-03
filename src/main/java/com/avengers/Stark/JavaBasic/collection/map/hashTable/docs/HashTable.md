@@ -15,7 +15,7 @@
 
 ### Data Structure
 
-```
+```java
 private transient Entry<?,?>[] table;
 
 Entry<K,V> implements Map.Entry<K,V> {
@@ -29,7 +29,7 @@ Entry<K,V> implements Map.Entry<K,V> {
 
 ### Constructor
 
-```
+```java
 public Hashtable(int initialCapacity, float loadFactor) {
     if (initialCapacity < 0)
         throw new IllegalArgumentException("Illegal Capacity: "+
@@ -60,7 +60,7 @@ public Hashtable(Map<? extends K, ? extends V> t) {
 
 ### apis
 
-```
+```java
 // all the methods is synchronized
 
 // Hashtable<K,V> extends Dictionary<K,V>
@@ -122,7 +122,7 @@ public synchronized int hashCode()
 
 ### iterator
 
-```
+```java
 // traversal of entrySet
 Iterator iter1 = table.entrySet().iterator();
 while(iter1.hasNext()) {

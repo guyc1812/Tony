@@ -18,7 +18,7 @@ Output: <br>
 * Call thread.start() method
 * Semaphore is used to control how many threads can be executed at a same time.
 
-```
+```java
 public class MultiThreads_Thread extends Thread {
 
     private Semaphore semaphore;
@@ -71,7 +71,7 @@ public class MultiThreads_Thread extends Thread {
 
 Test
 
-```
+```java
 public static void main(String[] args) {
     String series = "010203040506";
     Semaphore sem = new Semaphore(1);
@@ -86,7 +86,7 @@ public static void main(String[] args) {
 
 Output:
 
-```
+```bash
 Thread-0 START !
 Thread-2 START !
 Thread-1 START !
@@ -98,7 +98,7 @@ Thread-1 START !
 If `Semaphore sem = new Semaphore(3)`<br>
 Output:
 
-```
+```bash
 Thread-0 START !
 [thread]1:000000
 Thread-1 START !

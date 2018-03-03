@@ -17,7 +17,7 @@ If normal threads are not running and remaining threads are daemon threads then 
 
 Tip: We cannot call the setDaemon() method after starting the thread.
 
-```
+```java
 public class DaemonThread extends Thread {
 
     public void run() { 

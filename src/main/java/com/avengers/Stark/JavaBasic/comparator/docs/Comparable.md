@@ -2,7 +2,7 @@
 
 1. Implement the Comparable Interface and override the compareTo method
     
-    ```
+    ```java
     public class AvengerNext extends Avenger implements Comparable<AvengerNext> {
         
         AvengerNext(String name, int age){
@@ -17,7 +17,7 @@
     
 2. Use Collections.sort() method
     
-    ```
+    ```java
     AvengerNext IronMan = new AvengerNext("Tony", 40);
     AvengerNext Hulk = new AvengerNext("Banner", 44);
     AvengerNext Captain = new AvengerNext("Steve", 100);

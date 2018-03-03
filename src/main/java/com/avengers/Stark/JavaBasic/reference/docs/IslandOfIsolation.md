@@ -13,7 +13,7 @@
 
 ### Demo
 
-```
+```java
 public class IslandOfIsolation {
 
     private IslandOfIsolation i;
@@ -51,7 +51,7 @@ public class IslandOfIsolation {
 ```
 
 Output
-```
+```bash
 Finalize method called
 Finalize method called
 ```

@@ -2,7 +2,7 @@
 
 ### new HashSet
 
-```
+```java
 HashSet<String> set = new HashSet<>();
 set.add("a");
 set.add("b");
@@ -14,7 +14,7 @@ set.add("e");           // [a, b, c, d, e]
 
 ### Basic Usage
 
-```
+```java
 set.size();             // 5
 
 set.contains("a");      // true
@@ -42,7 +42,7 @@ set.isEmpty();          // true
 
 ### Traversal
 
-```
+```java
 // Iterator: recommend way
 for(Iterator iterator = set.iterator(); iterator.hasNext(); ) {
     System.out.print(iterator.next());

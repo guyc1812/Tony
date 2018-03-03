@@ -59,43 +59,43 @@ This is a problem of initialization order. <br>
 The subclass constructor will not have had a chance to run yet and there is no way to force it to run it before the parent class. <br>
 Consider the following example class:
 
-```
-        public abstract class Widget {
-	        private final int cachedWidth;
-	        private final int cachedHeight;
+```java
+public abstract class Widget {
+    private final int cachedWidth;
+    private final int cachedHeight;
 
-	        public Widget() {
-	            this.cachedWidth = width();
-	            this.cachedHeight = height();
-	        }
+    public Widget() {
+        this.cachedWidth = width();
+        this.cachedHeight = height();
+    }
 
-	        protected abstract int width();
-	        protected abstract int height();
-	    }
+    protected abstract int width();
+    protected abstract int height();
+}
 ```
 
 This seems like a good start for an abstract Widget: <br>
 it allows subclasses to fill in width and height, and caches their initial values. <br>
 However, look when you spec out a typical subclass implementation like so:
 
-```
-        public class SquareWidget extends Widget {
-	        private final int size;
+```java
+public class SquareWidget extends Widget {
+    private final int size;
 
-	        public SquareWidget(int size) {
-	            this.size = size;
-	        }
+    public SquareWidget(int size) {
+        this.size = size;
+    }
 
-	        @Override
-	        protected int width() {
-	            return size;
-	        }
+    @Override
+    protected int width() {
+        return size;
+    }
 
-	        @Override
-	        protected int height() {
-	            return size;
-	        }
-	    }
+    @Override
+    protected int height() {
+        return size;
+    }
+}
 ```
 
 Now we’ve introduced a subtle bug: <br>
@@ -108,7 +108,7 @@ as it restricts how those abstract methods can be implemented.
 ### How to design a singleton
 
 Lazy Initialization
-```
+```java
 /*
  * Intention is to minimize cost of synchronization and improve performance,
  * by only locking critical section of code, the code which creates instance of Singleton class.

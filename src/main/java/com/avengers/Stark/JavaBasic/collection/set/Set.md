@@ -22,6 +22,6 @@
     Both guarantee duplicate-free collection of elements.<br>
     None of these implementation are synchronized. <br>
     It is generally faster to add elements to the HashSet and then convert the collection to a TreeSet.<br>
-    ```
+    ```java
     SortedSet<String> s = new TreeSet<String>(hashSet);
     ```

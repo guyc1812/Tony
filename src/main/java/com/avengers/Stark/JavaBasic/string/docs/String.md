@@ -15,7 +15,7 @@ If not, it creates a new String object and stores it in the pool.
 When create a String using the new operator, it creates a new String object in the heap, not in the pool.
 
 When use intern() method:
-```
+```java
 String str = new String("abc");
 String str1 = str.intern();
 ```
@@ -23,7 +23,7 @@ Then the str1 will point to the matching object.
 
 
 Because Strings are immutable, when using + operator to concatenate two strings, a brand new String is created.
-```
+```java
 String str1 = "abc";
 String str2 = "ab";
 str2 = str2+"c";

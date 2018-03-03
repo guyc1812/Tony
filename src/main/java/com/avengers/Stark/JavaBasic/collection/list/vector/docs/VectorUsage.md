@@ -2,7 +2,7 @@
 
 ### new Vector
 
-```
+```java
 Vector vec = new Vector();
 vec.add("1");
 vec.add("2");
@@ -13,7 +13,7 @@ vec.add("5");
 
 ### Basic Usage
 
-```
+```java
 vec.set(0, null);
 vec.add(2, "300");        // [null, 2, 300, 3, 4, 5]
 

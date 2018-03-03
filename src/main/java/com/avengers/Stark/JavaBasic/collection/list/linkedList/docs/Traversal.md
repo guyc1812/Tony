@@ -2,7 +2,7 @@
 
 ### Get List
 
-```
+```java
 private static ArrayList getLinkedList(int num) {
     LinkedList<Integer> linkedList = new LinkedList<>();
     for (int i = 0; i < num; i++) linkedList.addLast(i);
@@ -12,7 +12,7 @@ private static ArrayList getLinkedList(int num) {
 
 ### Traversal
 
-```
+```java
 /* Traversal By Iterator */
 private static void traversalByIterator(LinkedList<Integer> list) {
     if (list == null) return;
@@ -47,7 +47,7 @@ private static void traversalByForLoop(LinkedList<Integer> list) {
 
 ### Test
 
-```
+```java
 public static void main(String[] args) {
 
     traversalByIterator(getLinkedList(100000));

@@ -3,13 +3,13 @@
 
 ### box
 
-```
+```java
 int[] intArray = new int[]{1, 2, 3, 4, 5};
 ```
 
 1.Integer.valueOf(int i)
 
-```
+```java
 Integer[] IntArray = new Integer[intArray.length];
 
 for (int i = 0; i < intArray.length; i++) {
@@ -20,7 +20,7 @@ for (int i = 0; i < intArray.length; i++) {
 
 2.Arrays.stream(intArray).boxed().toArray(Integer[]::new);
 
-```
+```java
 Integer[] IntArray = Arrays.stream(intArray)
                            .boxed()                  // int -> Integer
                            .toArray(Integer[]::new);
@@ -28,14 +28,14 @@ Integer[] IntArray = Arrays.stream(intArray)
 
 3.import org.apache.commons.lang3.ArrayUtils;
 
-```
+```java
 Integer[] IntArray = ArrayUtils.toObject(intArray);
 ```
 
 
 ## Array to List
 
-```
+```java
 // Array to List<T> (ArrayList implicitly)
 
 List<String>  list1 = Arrays.asList(StrArray);
@@ -56,7 +56,7 @@ Collections.addAll(list5, StrArray);
 
 ### Array to Set
 
-```
+```java
 Set<String>  set1 = new HashSet<>(Arrays.asList(StrArray));
 
 Set<Integer> set2 = Arrays.stream(intArray)
@@ -70,7 +70,7 @@ Collections.addAll(set3, StrArray);
 
 ### List/Set to Array
 
-```
+```java
 //list to array
 String[] array1 = list.stream().toArray(String[]::new);
 String[] array2 = list.toArray(new String[0]);
@@ -86,7 +86,7 @@ String[] array6 = set.toArray(new String[set1.size()]);    //more efficient
 
 ### List <-> Set
 
-```
+```java
  //list to set
 Set<String> set = new HashSet<>(list1);
 
@@ -97,7 +97,7 @@ LinkedList<String> list = new LinkedList<>(set4);
 
 ### Map to collection
 
-```
+```java
 Map<String,Integer> map = new HashMap<>();
 
 //values

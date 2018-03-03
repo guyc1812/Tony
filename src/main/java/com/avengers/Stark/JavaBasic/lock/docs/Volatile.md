@@ -31,7 +31,7 @@ you can have the thread periodically check a flag (i.e., to stop it, set the fla
 By making the flag volatile, <br>
 you can ensure that the thread that is checking its value will see that it has been set to true without even having to use a synchronized block. 
 
-```
+```java
 public class Foo extends Thread {
     private volatile boolean close = false;
     public void run() {
@@ -48,7 +48,7 @@ public class Foo extends Thread {
 
 ### Singleton 
 
-```
+```java
 public class Singleton {
 
     private volatile static Singleton uniqueInstance;

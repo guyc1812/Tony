@@ -17,7 +17,7 @@
 
 * AbstractMap APIs
 
-    ```
+    ```java
      void                 clear()
      boolean              containsKey(Object key)
      boolean              containsValue(Object value)
@@ -37,7 +37,7 @@
 
 * SortedMap APIs
   
-    ```
+    ```java
     abstract K                         firstKey()
     abstract K                         lastKey()
     abstract SortedMap<K, V>           headMap(K endKey)
@@ -71,7 +71,7 @@
     
 * Dictionary APIs
 
-    ```
+    ```java
     abstract Enumeration<V>     elements()
     abstract V                  get(Object key)
     abstract boolean            isEmpty()
@@ -93,7 +93,7 @@
 * WeakHashMap holds a reference queue for cleared WeakEntries, and remove the entry automatically.
 
 the WeakReference class
-```
+```java
 public class WeakReference<T> extends Reference<T> {
 
     public WeakReference(T referent) {
@@ -107,7 +107,7 @@ public class WeakReference<T> extends Reference<T> {
 }
 ```
 WeakHashMap Entry
-```
+```java
 private static class Entry<K,V> extends WeakReference<Object> implements Map.Entry<K,V> {
     V value;
     final int hash;
@@ -230,7 +230,7 @@ Get(Key k) calls hashCode method on the key object <br>
 and applies returned hashValue to its own static hash function to find a bucket location. <br>
 Both key and value is stored in the bucket as a form of Entry object. 
 
-```
+```java
 Public  V get(Object key){
      if (key ==null)
      //Some code

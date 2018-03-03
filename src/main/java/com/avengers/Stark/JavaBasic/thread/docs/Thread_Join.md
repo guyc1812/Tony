@@ -2,7 +2,7 @@
 
 ### Source
 
-```
+```java
 public final synchronized void join(long millis) throws InterruptedException {
     long base = System.currentTimeMillis();
     long now = 0;
@@ -35,7 +35,7 @@ public final void join() throws InterruptedException {
 
 ### Implementation
 
-```
+```java
 while (isAlive()) {
     wait(0);    // If the thread is alive, then wait 
 }
@@ -46,7 +46,7 @@ while (isAlive()) {
 
 * A Runnable Class
 
-    ```
+    ```java
     static class JoinRunnable implements Runnable {
         public void run() {
             try {
@@ -63,7 +63,8 @@ while (isAlive()) {
     ```
     
 * A Thread Class With synchronized Block Which Lock The Thread Instance
-    ```
+
+    ```java
     static class JoinThread_Sync extends Thread {
     
         Thread thread;
@@ -92,7 +93,7 @@ while (isAlive()) {
 
 ### Test join()
 
-```
+```java
 public static void main(String[] args){
     try {
         System.out.println("["+Thread.currentThread().getName()+ "] START !");
@@ -111,8 +112,8 @@ public static void main(String[] args){
 1. `t.join();` delay = 0, thread running time(5000)<br>
     [main] wait until the [JoinThread] finish
 
-    ```
-    // Output:
+    Output:
+    ```bash
     [main]            START !
     [JoinThread]      START !
     [JoinThread]      FINISH --> Timer : 5000 ms
@@ -122,8 +123,8 @@ public static void main(String[] args){
 2. `t.join(1000);` delay < thread running time(5000)<br>
    [main] only wait [JoinThread] for 1000 ms
 
-    ```
-    // Output:
+    Output:
+    ```bash
     [main]            START !
     [JoinThread]      START !
     [main]            DONE --> Timer : 1000 ms
@@ -133,8 +134,8 @@ public static void main(String[] args){
 3. `t.join(7000);` delay > thread running time(5000)<br>
     equivalent to `t.join();`
     
-    ```
-    // Output:
+    Output:
+    ```bash
     [main]            START !
     [JoinThread]      START !
     [JoinThread]      FINISH --> Timer : 5000 ms
@@ -144,7 +145,7 @@ public static void main(String[] args){
 
 ### Test join() With A Thread Holding A Lock
 
-```
+```java
 public static void main(String[] args){
 
     try {
@@ -168,8 +169,8 @@ public static void main(String[] args){
     [JoinThread_Sync] running time(3000)<br>
     [main] wait until the both [JoinThread] and [JoinThread_Sync] finish
 
-    ```
-    // Output:
+    Output:
+    ```bash
     [main]            START !
     [JoinThread_Sync] LOCK AND START !
     [JoinThread]      START !
@@ -181,8 +182,8 @@ public static void main(String[] args){
 2. `t.join(10000);` delay > max{[JoinThread],[JoinThread_Sync]} running time(5000) <br>
    [main] wait max{[JoinThread],[JoinThread_Sync]} running time(5000)
 
-    ```
-    // Output:
+    Output:
+    ```bash
     [main]            START !
     [JoinThread_Sync] LOCK AND START !
     [JoinThread]      START !
@@ -194,8 +195,8 @@ public static void main(String[] args){
 3. `t.join(2000);` delay < [JoinThread_Sync] running time(3000) <br>
     [main] wait at least [JoinThread_Sync] running time(5000)
     
-    ```
-    // Output:
+    Output:
+    ```bash
     [main]            START !
     [JoinThread_Sync] LOCK AND START !
     [JoinThread]      START !
@@ -207,8 +208,8 @@ public static void main(String[] args){
 4. `t.join(4000);` [JoinThread] running time(5000) < delay < [JoinThread_Sync] running time(3000) <br>
     [main] wait delay(4000)
     
-    ```
-    // Output:
+    Output:
+    ```bash
     [main]            START !
     [JoinThread_Sync] LOCK AND START !
     [JoinThread]      START !

@@ -1,8 +1,6 @@
 # JVM
 
-
 ![image](http://guyuchen.com/deadpool/github/Java-JVM-Tuning-Crunchify-Tips.png)
-
 
 ### Heap Size:
 

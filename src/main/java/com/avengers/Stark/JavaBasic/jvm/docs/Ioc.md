@@ -60,7 +60,7 @@ These activities are known as bean Lifecycle.
 ### Demo in Spring
 
 CoreConfig.java
-```
+```java
 import com.mongodb.MongoClient;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
@@ -87,7 +87,7 @@ public class CoreConfig {
 ```
 
 Application.java
-```
+```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -108,7 +108,7 @@ public class Application {
 ```
 
 Use with annotaions
-```
+```java
 @Autowired
 @Service
 @Bean

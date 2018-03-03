@@ -11,7 +11,7 @@ Following are the differences between two:<br>
 * throw clause can be used in any part of code where you feel a specific exception needs to be thrown to the calling method
 
 E.g.
-```
+```java
 //throw
 throw new Exception(“You have some exception”)
 throw new IOException(“Connection failed!!”)
@@ -24,7 +24,7 @@ throws IOException, NullPointerException, ArithmeticException
 
 This can be done using Thread.UncaughtExceptionHandler.
 
-```
+```java
 // create our uncaught exception handler
 Thread.UncaughtExceptionHandler handler = new Thread.UncaughtExceptionHandler() {
     public void uncaughtException(Thread th, Throwable ex) {

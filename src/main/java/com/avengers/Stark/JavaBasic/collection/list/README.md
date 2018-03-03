@@ -24,7 +24,7 @@
     No Thread Safe.<br>
     Fail-Fast.<br>
     Size: 1.5 times
-    ```
+    ```java
     initialCapacity = 10;
     newCapacity = oldCapacity + (oldCapacity >> 1);
     newCapacity >= minCapacity? newCapacity
@@ -48,7 +48,7 @@
     Fail-Fast.<br>
     Supports both Enumeration and Iterator.<br>
     Size: 2 times
-    ```
+    ```java
     initialCapacity = 10 ;
     capacityIncrement? newCapacity = oldCapacity + capacityIncrement
                      : newCapacity = oldCapacity * 2 ;

@@ -11,7 +11,7 @@
     correspond to the current thread
 
 
-```
+```java
 public static void main(String args[]) {
 
         String series = "010203040506";
@@ -32,7 +32,7 @@ public static void main(String args[]) {
 
 Output
 
-```
+```bash
 main START !
 [thread]3:135
 

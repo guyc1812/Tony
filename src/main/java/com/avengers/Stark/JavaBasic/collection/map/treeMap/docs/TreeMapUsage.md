@@ -2,7 +2,7 @@
 
 ### basicApi
 
-```
+```java
 private static void basicApi() {
 
     TreeMap<String, Integer> tmap = new TreeMap<>();
@@ -27,10 +27,9 @@ private static void basicApi() {
 }
 ```
 
-
 ### navigableApi
 
-```
+```java
 public static void navigableApi() {
 
     NavigableMap nav = new TreeMap();
@@ -60,7 +59,7 @@ public static void navigableApi() {
 
 ### subMapApi
 
-```
+```java
 public static void subMapApi() {
 
     TreeMap tmap = new TreeMap();

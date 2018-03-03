@@ -11,7 +11,7 @@
 
 ### Nullifying the reference variable
 
-```
+```java
 WaysForGC_1 t1 = new WaysForGC_1("t1");
 t1 = null;
 
@@ -21,7 +21,7 @@ System.gc();
 
 ### Re-assigning the reference variable
 
-```
+```java
 WaysForGC_2 t1 = new WaysForGC_2("t1");
 WaysForGC_2 t2 = new WaysForGC_2("t2");
 t1 = t2;
@@ -34,7 +34,7 @@ System.gc();
 
 ### Object created inside method
 
-```
+```java
 static void show() {
     //object t1 inside method becomes unreachable when show() removed
     WaysForGC_3 t1 = new WaysForGC_3("t1");
@@ -58,7 +58,7 @@ public static void main(String args[]) {
 
 ### Island of Isolation
 
-```
+```java
 new WaysForGC_4("t1");  // no reference
 System.gc();
 ```

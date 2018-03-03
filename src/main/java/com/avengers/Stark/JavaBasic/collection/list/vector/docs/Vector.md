@@ -8,7 +8,7 @@
 * add(), remove() operations runs in amortized constant time O(n).
 * Capacity >= Size, default capacity is 10.
 * Size: 2 times
-    ```
+    ```java
     initialCapacity = 10 ;
     capacityIncrement? newCapacity = oldCapacity + capacityIncrement
                    : newCapacity = oldCapacity * 2 ;
@@ -22,19 +22,19 @@
 
 * Data Structure
 
-    ```
+    ```java
     protected Object[] elementData;
     ```
     
 * DEFAULT_CAPACITY 
 
-    ```
+    ```java
     initialCapacity = 10;
     ```
 
 * Constructor
 
-    ```
+    ```java
     public Vector(int initialCapacity) {
         this(initialCapacity, 0);
     }
@@ -63,13 +63,13 @@
     
 * About capacity and size
 
-    ```
+    ```java
     initialCapacity = 10 ;
     capacityIncrement? newCapacity = oldCapacity + capacityIncrement
                    : newCapacity = oldCapacity * 2 ;
     ```
     
-    ```
+    ```java
     public synchronized void ensureCapacity(int minCapacity) {
         if (minCapacity > 0) {
             modCount++;
@@ -108,7 +108,7 @@
 
 * APIs
 
-    ```
+    ```java
     // query
     synchronized int            size()
     synchronized int            capacity()

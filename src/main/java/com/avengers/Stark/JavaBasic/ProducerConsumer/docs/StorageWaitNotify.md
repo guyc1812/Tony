@@ -2,7 +2,7 @@
 
 ### Demo
 
-```
+```java
 public class Storage_WaitNotify implements Storage {
 
     private final int MAX_SIZE = 100;

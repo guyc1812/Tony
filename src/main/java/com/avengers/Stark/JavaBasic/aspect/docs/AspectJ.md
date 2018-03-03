@@ -59,7 +59,7 @@ The key unit of modularity in OOP is the class, whereas in AOP the unit of modul
 
 * Use with Annotation
 
-    ```
+    ```java
     /**
      * 1. CoreConfig add @EnableAspectJAutoProxy
      * 2. add @Component to declare a bean
@@ -141,7 +141,7 @@ The key unit of modularity in OOP is the class, whereas in AOP the unit of modul
 
 * Demo Test
 
-    ```
+    ```java
     @Autowired
     @Qualifier("calculator")
     Calculator calculator;

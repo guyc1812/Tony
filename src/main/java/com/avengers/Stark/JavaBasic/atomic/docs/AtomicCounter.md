@@ -2,7 +2,7 @@
 
 ### Demo
 
-```
+```java
 public class AtomicCounter {
 
     private AtomicInteger value = new AtomicInteger();
@@ -39,7 +39,7 @@ public class AtomicCounter {
 
 ### Demo Test
 
-```
+```java
 public static void main(String[] args) {
     final AtomicCounter counter = new AtomicCounter();
     ExecutorService service = Executors.newFixedThreadPool(50);
@@ -55,7 +55,7 @@ public static void main(String[] args) {
 
 ### Output for test-without-atomic
 
-``` 
+```bash
 pool-1-thread-1	 k simple plus two -> 2         // error
 pool-1-thread-5	 k simple plus two -> 8
 pool-1-thread-4	 k simple plus two -> 6
@@ -69,7 +69,7 @@ pool-1-thread-7	 k simple plus two -> 16
 
 ### Output for test-with-atomic
 
-```
+```bash
 pool-1-thread-2	 atomic plus two -> 2
 pool-1-thread-4	 atomic plus two -> 10
 pool-1-thread-5	 atomic plus two -> 8

@@ -8,7 +8,7 @@
 * add(), remove() operations runs in amortized constant time O(n).
 * Capacity >= Size, default capacity is 10.
 * Size: 1.5 times
-    ```
+    ```java
     initialCapacity = 10;
     newCapacity = oldCapacity + (oldCapacity >> 1);
     newCapacity >= minCapacity? newCapacity
@@ -16,7 +16,7 @@
     ```
 * Use fail-fast iterators.
 * No thread safe.
-    ```
+    ```java
     List list = Collections.synchronizedList(new ArrayList(...));
     ```
 
@@ -24,19 +24,19 @@
 
 * Data Structure
 
-    ```
+    ```java
     transient Object[] elementData
     ```
     
 * DEFAULT_CAPACITY 
 
-    ```
+    ```java
     private static final int DEFAULT_CAPACITY = 10;
     ```
 
 * Constructor
 
-    ```
+    ```java
     // 1. DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {}
     public ArrayList() {
         this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
@@ -75,7 +75,7 @@
     operation.  <br>
     This may reduce the amount of incremental reallocation.
 
-    ```
+    ```java
     /**
      * The maximum size of array to allocate.
      * Some VMs reserve some header words in an array.
@@ -132,7 +132,7 @@
     
 * Basic Operations
 
-    ```
+    ```java
     // add      -> modCount++
     public boolean add(E e)
     public void add(int index, E element)
@@ -170,7 +170,7 @@
 
 * Iterator
 
-    ```
+    ```java
     /**
      * Itr  ->  hasNext(): boolean
      *          next(): E
@@ -195,7 +195,7 @@
     
 * New API
 
-    ```
+    ```java
     /**
      * Returns a shallow copy of this <tt>ArrayList</tt> instance.  (The
      * elements themselves are not copied.)

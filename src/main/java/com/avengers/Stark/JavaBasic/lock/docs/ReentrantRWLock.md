@@ -25,7 +25,7 @@ ReentrantReadWriteLock is the implementation of ReadWriteLock.
 
 ### Demo
 
-```
+```java
 public class ReentrantRDLockDemo {
 
     private static final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
@@ -66,7 +66,7 @@ public class ReentrantRDLockDemo {
 
 Test
 
-```
+```java
 public static void main(String[] args) {
     ExecutorService pool = Executors.newFixedThreadPool(4);
     pool.execute(new Read());
@@ -79,7 +79,7 @@ public static void main(String[] args) {
 
 Output:
 
-```
+```bash
 // read threads is alternant
 R pool-1-thread-1 ---> Message is a
 R pool-1-thread-2 ---> Message is a

@@ -2,61 +2,61 @@
 
 ### Basic Usage
 
-```
+```java
 TreeSet tSet = new TreeSet();
-    tSet.add("aaa");
-    tSet.add("aaa");
-    tSet.add("bbb");
-    tSet.add("eee");
-    tSet.add("ddd");
-    tSet.add("ccc");
+tSet.add("aaa");
+tSet.add("aaa");
+tSet.add("bbb");
+tSet.add("eee");
+tSet.add("ddd");
+tSet.add("ccc");
 
-    tSet.size();                // 5
-    
-    // floor(<=)
-    tSet.floor("bbb");          // bbb
-    // lower(<)
-    tSet.lower("bbb");          // aaa
-    
-    // ceiling(>=)
-    tSet.ceiling("bbb");        // bbb
-    tSet.ceiling("eee");        // eee
-    // higher(>)
-    tSet.higher("bbb");         // ccc
-    
-    // subSet()
-    tSet.subSet("aaa", true, "ccc", true);      // [aaa, bbb, ccc]
-    tSet.subSet("aaa", true, "ccc", false);     // [aaa, bbb]
-    tSet.subSet("aaa", false, "ccc", true);     // [bbb, ccc]
-    tSet.subSet("aaa", false, "ccc", false);    // [bbb]
-        
-    // headSet()
-    tSet.headSet("ccc", true);          // [aaa, bbb, ccc]
-    tSet.headSet("ccc", false);         // [aaa, bbb]
-    
-    // tailSet()
-    tSet.tailSet("ccc", true);          // [ccc, ddd, eee]
-    tSet.tailSet("ccc", false);         // [ddd, eee]
+tSet.size();                // 5
 
-    // pollFirst
-    String val1 = (String)tSet.pollFirst();     // aaa
+// floor(<=)
+tSet.floor("bbb");          // bbb
+// lower(<)
+tSet.lower("bbb");          // aaa
 
-    // pollLast
-    String valn = (String)tSet.pollLast();      // eee
+// ceiling(>=)
+tSet.ceiling("bbb");        // bbb
+tSet.ceiling("eee");        // eee
+// higher(>)
+tSet.higher("bbb");         // ccc
 
-    // remove
-    tSet.remove("ccc");                
+// subSet()
+tSet.subSet("aaa", true, "ccc", true);      // [aaa, bbb, ccc]
+tSet.subSet("aaa", true, "ccc", false);     // [aaa, bbb]
+tSet.subSet("aaa", false, "ccc", true);     // [bbb, ccc]
+tSet.subSet("aaa", false, "ccc", false);    // [bbb]
     
-    // to array
-    String[] arr = (String[])tSet.toArray(new String[0]);
-                                        // [aaa, bbb, ddd, eee]
-    tSet.clear();
-    tSet.isEmpty();
+// headSet()
+tSet.headSet("ccc", true);          // [aaa, bbb, ccc]
+tSet.headSet("ccc", false);         // [aaa, bbb]
+
+// tailSet()
+tSet.tailSet("ccc", true);          // [ccc, ddd, eee]
+tSet.tailSet("ccc", false);         // [ddd, eee]
+
+// pollFirst
+String val1 = (String)tSet.pollFirst();     // aaa
+
+// pollLast
+String valn = (String)tSet.pollLast();      // eee
+
+// remove
+tSet.remove("ccc");                
+
+// to array
+String[] arr = (String[])tSet.toArray(new String[0]);
+                                    // [aaa, bbb, ddd, eee]
+tSet.clear();
+tSet.isEmpty();
 ```
 
 If not the primary type
 
-```
+```java
 // AvengerNext implements Comparable<AvengerNext>
 
 AvengerNext IronMan = new AvengerNext("Tony", 40);
@@ -72,7 +72,7 @@ System.out.println(as);
 // [Avenger(name=Natasha, age=30), Avenger(name=Tony, age=40), Avenger(name=Banner, age=44), Avenger(name=Steve, age=100)]
 ```
 
-```
+```java
 // Avenger doesn't implement Comparable<Avenger>
 
 Avenger IronMan = new Avenger("Tony", 40);
@@ -88,7 +88,7 @@ TreeSet<Avenger> as = new TreeSet<>(avengers);
 
 ### Traversal
 
-```
+```java
 // asc
 public static void ascIteratorThroughIterator(TreeSet set) {
     System.out.print("\n ---- Ascend Iterator ----\n");
@@ -115,7 +115,7 @@ private static void foreachTreeSet(TreeSet set) {
 ```
 
 output
-```
+```bash
  ---- Ascend Iterator ----
 asc : aaa
 asc : bbb

@@ -8,13 +8,13 @@
 * provides guaranteed log(n) time cost for the containsKey, get, put and remove operations.
 * Use fail-fast iterators.
 * No thread safe
-    ```
+    ```java
     SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));
     ```
 
 ### Data Structure
 
-```
+```java
 private transient Entry<K,V> root;
 
 // BR Tree
@@ -31,7 +31,7 @@ Entry<K,V> implements Map.Entry<K,V> {
 
 ### Constructor
 
-```
+```java
 public TreeMap() {
     comparator = null;
 }
@@ -58,7 +58,7 @@ public TreeMap(SortedMap<K, ? extends V> m) {
 
 ### apis
 
-```
+```java
 public K firstKey() 
 public K lastKey()
 
@@ -92,7 +92,7 @@ public Object clone()
 
 ### TreeMap<K,V> implements NavigableMap<K,V>
 
-```
+```java
 public Map.Entry<K,V> firstEntry() 
 public Map.Entry<K,V> lastEntry() 
 public Map.Entry<K,V> pollFirstEntry() 
@@ -128,7 +128,7 @@ public NavigableMap<K, V> descendingMap()
 
 ### Iterator
 
-```
+```java
 Iterator<K> keyIterator()
 Iterator<K> descendingKeyIterator() 
 ```

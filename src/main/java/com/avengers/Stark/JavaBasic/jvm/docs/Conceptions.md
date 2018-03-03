@@ -58,7 +58,7 @@ this is the reason why java is platform independent.
     The methods must have different signature.<br>
     It may or may not need inheritance in Method Overloading.<br>
     Let’s take a look at the example below to understand it better.<br>
-    ```
+    ```java
     class Adder {
         Static int add(int a, int b) {
             return a+b;
@@ -82,7 +82,7 @@ this is the reason why java is platform independent.
     The methods must have same signature.<br>
     It always requires inheritance in Method Overriding.<br>
     Let’s take a look at the example below to understand it better.<br>
-    ```
+    ```java
     class Car {
     
         void run(){
@@ -121,7 +121,7 @@ ThreadLocal instances are typically private static fields in classes that wish t
 The example below, from the ThreadLocal Javadoc, generates unique identifiers local to each thread. <br>
 A thread’s id is assigned the first time it invokes ThreadId.get() and remains unchanged on subsequent calls.
 
-```
+```java
 public class ThreadId {
     // Next thread ID to be assigned
     private static final AtomicInteger nextId = new AtomicInteger(0);

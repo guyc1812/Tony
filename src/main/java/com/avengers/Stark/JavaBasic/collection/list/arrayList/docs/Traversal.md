@@ -2,7 +2,7 @@
 
 ### Get List
 
-```
+```java
 private static ArrayList getArrayList(int num) {
     ArrayList<Integer> arrayList = new ArrayList<>();
     for (int i = 0; i < num; i++) arrayList.add(i);
@@ -12,7 +12,7 @@ private static ArrayList getArrayList(int num) {
 
 ### Traversal
 
-```
+```java
 /* Traversal By Iterator */
 private static void traversalByIterator(ArrayList<Integer> list) {
     if (list == null) return;
@@ -59,7 +59,7 @@ private static void traversalByStream(ArrayList<Integer> list) {
 
 ### Test
 
-```
+```java
 public static void main(String[] args) {
         
     ArrayList<Integer> t1 = getArrayList(1000000);

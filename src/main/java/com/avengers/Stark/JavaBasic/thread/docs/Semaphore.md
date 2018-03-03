@@ -3,7 +3,7 @@
 
 ### Demo uses the ExecutorService
 
-```
+```java
 ExecutorService exec = Executors.newCachedThreadPool();
 exec.execute(runnable <Runnable>);
 ```
@@ -12,7 +12,7 @@ exec.execute(runnable <Runnable>);
 
 A runnable instance requires a Semaphore
 
-```
+```java
 private Runnable newRun(int NO, Semaphore semp){
     return () -> {
         try {
@@ -33,7 +33,7 @@ private Runnable newRun(int NO, Semaphore semp){
 
 Semaphore controls how many threads can be executed at a same time
 
-```
+```java
 public static void main(String[] args) {
 
     ExecutorService exec = Executors.newCachedThreadPool();
@@ -52,7 +52,7 @@ public static void main(String[] args) {
 
 Output: 5 threads at a time
 
-```
+```bash
 pool-1-thread-1 => Accessing: 0
 pool-1-thread-4 => Accessing: 3
 pool-1-thread-5 => Accessing: 4

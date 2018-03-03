@@ -23,17 +23,17 @@ so there is no fail-fast in the CopyOnWriteArrayList.<br>
 
 relpace
 
-```
+```java
     private static List<String> list = new ArrayList<String>();
 ```
 
 with
 
-```
+```java
     private static List<String> list = new CopyOnWriteArrayList<String>();
 ```
 
-```
+```bash
 ConcurrentHashMap 
 ConcurrentLinkedDeque 
 ConcurrentLinkedQueue 

@@ -24,27 +24,27 @@
 
 * AbstractMap APIs
 
-    ```
-     void                 clear()
-     boolean              containsKey(Object key)
-     boolean              containsValue(Object value)
-     boolean              equals(Object object)
-     V                    get(Object key)
-     int                  hashCode()
-     boolean              isEmpty()
-     Set<K>               keySet()
-     V                    put(K key, V value)
-     void                 putAll(Map<? extends K, ? extends V> map)
-     V                    remove(Object key)
-     int                  size()
-     String               toString()
-     Collection<V>        values()
-     Object               clone()
+    ```java
+    void                 clear()
+    boolean              containsKey(Object key)
+    boolean              containsValue(Object value)
+    boolean              equals(Object object)
+    V                    get(Object key)
+    int                  hashCode()
+    boolean              isEmpty()
+    Set<K>               keySet()
+    V                    put(K key, V value)
+    void                 putAll(Map<? extends K, ? extends V> map)
+    V                    remove(Object key)
+    int                  size()
+    String               toString()
+    Collection<V>        values()
+    Object               clone()
     ```
 
 * SortedMap APIs
   
-    ```
+    ```java
     abstract K                         firstKey()
     abstract K                         lastKey()
     abstract SortedMap<K, V>           headMap(K endKey)
@@ -78,7 +78,7 @@
     
 * Dictionary APIs
 
-    ```
+    ```java
     abstract Enumeration<V>     elements()
     abstract V                  get(Object key)
     abstract boolean            isEmpty()
@@ -100,7 +100,8 @@
 * WeakHashMap holds a reference queue for cleared WeakEntries, and remove the entry automatically.
 
 the WeakReference class
-```
+
+```java
 public class WeakReference<T> extends Reference<T> {
 
     public WeakReference(T referent) {
@@ -114,7 +115,8 @@ public class WeakReference<T> extends Reference<T> {
 }
 ```
 WeakHashMap Entry
-```
+
+```java
 private static class Entry<K,V> extends WeakReference<Object> implements Map.Entry<K,V> {
     V value;
     final int hash;
@@ -218,7 +220,7 @@ so that the hash table has approximately twice the number of buckets.
 * Hash Function
     Hash Function is the hashCode() function which returns an integer value.<br>
     This method is present in Object class (Mother of all class).<br>
-    ```
+    ```java
     public native int hashCode();
     ```
 
@@ -237,7 +239,7 @@ Get(Key k) calls hashCode method on the key object <br>
 and applies returned hashValue to its own static hash function to find a bucket location. <br>
 Both key and value is stored in the bucket as a form of Entry object. 
 
-```
+```java
 Public  V get(Object key){
      if (key ==null)
      //Some code

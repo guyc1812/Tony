@@ -8,7 +8,7 @@
 
 ### From 'running' to 'ready' state
 
-```
+```java
 public class YieldDemo {
     
     private static Object obj = new Object();
@@ -38,7 +38,7 @@ public class YieldDemo {
 ``` 
 
 Output:
-```
+```bash
 t2 is running
 t1 is running
 t1 is yielding
@@ -62,7 +62,7 @@ t1 is running
 
 ### yield() method does not release lock
 
-```
+```java
 public class YieldDemo {
 
     private static Object obj = new Object();
@@ -94,7 +94,7 @@ public class YieldDemo {
 ```
 
 Output:
-```
+```bash
 t1 is running
 t1 is yielding
 t1 is running

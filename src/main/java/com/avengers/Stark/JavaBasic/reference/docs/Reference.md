@@ -12,7 +12,7 @@
     A Soft reference is eligible for collection by garbage collector, 
     but will only be collected when GC'S algorithms decide that memory is low enough to warrant it.
     i.e. garbage collects before OutOfMemoryError.
-    ```
+    ```java
     SoftReference ref = new SoftReference(new StringBuilder());
     String s = ref.get();
     ```
@@ -21,7 +21,7 @@
 
     A Weak reference is a reference that does not protect a referenced object from collection by GC. 
     i.e. garbage collects when no Strong or Soft refs.
-    ```
+    ```java
     WeakReference ref = new WeakReference(new StringBuilder());
     String s = ref.get();
     ```
@@ -56,7 +56,7 @@
 
 This swap() method test can be used with any programming language to check whether it’s pass by value or pass by reference.
 
-```
+```java
 public static void swap(Object o1, Object o2){ 
 	Object temp = o1;
 	o1=o2;
@@ -66,7 +66,7 @@ public static void swap(Object o1, Object o2){
 
 Demo code
 
-```
+```java
 public class Test {
 
 	public static void main(String[] args) {

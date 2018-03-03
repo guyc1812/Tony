@@ -14,21 +14,21 @@ Thus, it's very important not to set the initial capacity too high
 (or the load factor too low) if iteration performance is important.
 * Use fail-fast iterators.
 * No thread safe
-    ```
+    ```java
     SortedSet s = Collections.synchronizedSortedSet(new TreeSet(...));
     ```
 
 
 ### Data Structure
 
-```
+```java
 private transient NavigableMap<E,Object> m;
 ```
 
 
 ### Constructor
 
-```
+```java
 public TreeSet() {
     this(new TreeMap<E,Object>());
 }
@@ -53,7 +53,7 @@ public TreeSet(SortedSet<E> s) {
 
 * Basic api
 
-    ```
+    ```java
     public int size()
     
     public boolean isEmpty()
@@ -80,7 +80,7 @@ public TreeSet(SortedSet<E> s) {
 
 * TreeSet<E> extends AbstractSet<E>
 
-    ```
+    ```java
     public boolean equals(Object o)
     public int hashCode()
     public boolean removeAll(Collection<?> c) 
@@ -88,7 +88,7 @@ public TreeSet(SortedSet<E> s) {
 
 * TreeSet<E> implements NavigableSet<E>
 
-    ```
+    ```java
     public NavigableSet<E> subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)
     public NavigableSet<E> headSet(E toElement, boolean inclusive)
     public NavigableSet<E> tailSet(E fromElement, boolean inclusive)
@@ -118,7 +118,7 @@ public TreeSet(SortedSet<E> s) {
 
 * Iterator
 
-    ```
+    ```java
     public Iterator<E> iterator() {
         return m.navigableKeySet().iterator();
     }

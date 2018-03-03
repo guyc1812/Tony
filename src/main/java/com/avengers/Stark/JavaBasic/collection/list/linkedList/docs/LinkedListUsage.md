@@ -2,7 +2,7 @@
 
 ### new LinkedList
 
-```
+```java
 LinkedList<String> linkedList = new LinkedList<>();
 linkedList.add("a");
 linkedList.add("b");
@@ -13,7 +13,7 @@ linkedList.add("e");           // [a, b, c, d, e]
 
 ### add and set
 
-```
+```java
 // add allow index==size
 linkedList.add(4,"e");         // [a, b, c, d, e]
 linkedList.add(9,"f");         // java.lang.IndexOutOfBoundsException
@@ -46,20 +46,20 @@ linkedList.set(9,"f");         // java.lang.IndexOutOfBoundsException
 
 ### toArray
 
-```
+```java
 String[] arr = (String[])linkedList.toArray(new String[linkedList.size()]);
 ```
 
 ### clear and isEmpty
 
-```
+```java
 linkedList.clear();         // void
 linkedList.isEmpty()        // true
 ```
 
 ### As Stack - LIFO
 
-```
+```java
 LinkedList<String> stack = new LinkedList<>();
 stack.push("1");
 stack.push("2");
@@ -77,7 +77,7 @@ stack.peek()            // e or null(when stack is empty)
 
 ### As Queue - FIFO
 
-```
+```java
 LinkedList<String> queue = new LinkedList<>();
 queue.add("1");
 queue.add("2");
@@ -85,6 +85,7 @@ queue.add("3");         // true
 
 queue.remove();         // e or NoSuchElementException(when stack is empty)
 queue.element();        // e or NoSuchElementException(when stack is empty)
+```
 
 | queue way | equivalent way |
 |:----------|:---------------|
@@ -94,14 +95,13 @@ queue.element();        // e or NoSuchElementException(when stack is empty)
 | poll()    | pollFirst()    |
 | element() | getFirst()     |
 | peek()    | peekFirst()    |
-```
 
 
 ### Usage Demo
 
 * basicApi
 
-    ```
+    ```java
     private static void basicApi() {
 
         LinkedList linkedList = new LinkedList();
@@ -146,7 +146,7 @@ queue.element();        // e or NoSuchElementException(when stack is empty)
 
 * stackApi
 
-    ```
+    ```java
     private static void stackApi() {
 
         LinkedList stack = new LinkedList();
@@ -164,7 +164,7 @@ queue.element();        // e or NoSuchElementException(when stack is empty)
 
 * queueApi
 
-    ```
+    ```java
     private static void queueApi() {
 
         LinkedList queue = new LinkedList();

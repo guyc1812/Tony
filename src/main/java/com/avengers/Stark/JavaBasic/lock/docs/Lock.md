@@ -7,13 +7,13 @@ synchronized和ReentrantLock都是可重入锁，可重入性表明了锁的分�
 举个简单的例子，当一个线程执行到某个synchronized方法时，
 比如说method1，而在method1中会调用另外一个synchronized方法method2，此时线程不必重新去申请锁，而是可以直接执行方法method2。
 
-```
-    class MyClass {
-        public synchronized void method1() {
-            method2();
-        }
-        public synchronized void method2() {}
+```java
+class MyClass {
+    public synchronized void method1() {
+        method2();
     }
+    public synchronized void method2() {}
+}
 
 ```
 
@@ -45,8 +45,8 @@ synchronized和ReentrantLock都是可重入锁，可重入性表明了锁的分�
 
 而对于ReentrantLock和ReentrantReadWriteLock，它默认情况下是非公平锁，但是可以设置为公平锁。
 
-```
-    ReentrantLock lock = new ReentrantLock(true);
+```java
+ReentrantLock lock = new ReentrantLock(true);
 ```
 
 # 读写锁
