@@ -162,5 +162,12 @@ scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit u
 scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit);
 ```
 
+### Shutdown
+
+```java
+executorService.shutdown();     //shutdown after all jobs finished in queue
+executorService.shutdownNow();  //shutdown after all executing jobs and abandon others in queue
+```
+
 
 [CODE](https://github.com/guyc1812/Tony/blob/master/src/main/java/com/avengers/tony/JavaBasic/thread/code)

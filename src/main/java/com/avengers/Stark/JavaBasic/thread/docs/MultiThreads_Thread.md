@@ -11,7 +11,7 @@ Output: <br>
 [thread]3:135
 
 
-### extends Thread
+### extends Thread - way 1
 
 * MultiThreads_Thread extends Thread 
 * Override run() method
@@ -105,6 +105,48 @@ Thread-1 START !
 [thread]2:246
 Thread-2 START !
 [thread]3:135
+```
+
+### use join() - way 2
+
+```java
+private static Thread t0 = new Thread(() -> {
+    try {
+        Thread.sleep(500);
+        System.out.println(Thread.currentThread().getName() + " =>0");
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+});
+
+private static Thread t1 = new Thread(() -> {
+    try {
+        t0.join();
+        Thread.sleep(500);
+        System.out.println(Thread.currentThread().getName() + " =>1");
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+});
+
+private static Thread t2 = new Thread(() -> {
+    try {
+        t1.join();
+        Thread.sleep(500);
+        System.out.println(Thread.currentThread().getName() + " =>2");
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+});
+
+public static void main(String args[]) {
+    t2.start();
+    t1.start();
+    t0.start();
+    // Thread-0 =>0
+    // Thread-1 =>1
+    // Thread-2 =>2
+}
 ```
 
 
