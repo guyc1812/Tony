@@ -11,7 +11,7 @@ Output: <br>
 [thread]3:135
 
 
-### extends Thread - way 1
+### Extends Thread - way 1
 
 * MultiThreads_Thread extends Thread 
 * Override run() method
