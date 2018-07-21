@@ -174,6 +174,6 @@ worker-2 is out
 
 
 
-### Reference
+### References
 
 [Reentrant Lock in Java](https://www.geeksforgeeks.org/reentrant-lock-java)

@@ -10,16 +10,16 @@
             "items":    [
                 {
                     "category": "Stark",
-                    "title":    "Java virtual machine",
+                    "title":    "JVM",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Jvm.md",
-                    "nav":      "JVM-JavaVirtualMachine",
+                    "nav":      "JVM-Conceptions",
                     "status":   310,
                     "items":    []
                 }, {
                     "category": "Stark",
-                    "title":    "Conceptions",
-                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Conceptions.md",
-                    "nav":      "JVM-Conceptions",
+                    "title":    "Garbage Collection",
+                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/GC.md",
+                    "nav":      "JVM-GC",
                     "status":   310,
                     "items":    []
                 }, {
@@ -27,20 +27,6 @@
                     "title":    "Atom Operation",
                     "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/AtomOperation.md",
                     "nav":      "JVM-AtomOperation",
-                    "status":   310,
-                    "items":    []
-                },{
-                    "category": "Stark",
-                    "title":    "Questions",
-                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Questions.md",
-                    "nav":      "JVM-Questions",
-                    "status":   310,
-                    "items":    []
-                }, {
-                    "category": "Stark",
-                    "title":    "IOC",
-                    "path":     "src/main/java/com/avengers/Stark/JavaBasic/jvm/docs/Ioc.md",
-                    "nav":      "JVM-IOC",
                     "status":   310,
                     "items":    []
                 }
