@@ -18,7 +18,7 @@
         <!-- ==== Maven Plugins Version ===== -->
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <!-- ==== Library Version =========== -->
-        <spring.version>4.3.11.RELEASE</spring.version>
+        <spring.version>5.2.3.RELEASE</spring.version>
         <mongoDB.connector.version>2.13.2</mongoDB.connector.version>
     </properties>
 
