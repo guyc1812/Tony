@@ -41,9 +41,9 @@ public class ReentrantRDLockDemo {
 
     public static void main(String[] args) {
         ExecutorService pool = Executors.newFixedThreadPool(4);
+        pool.execute(new Read());
+        pool.execute(new Read());
         pool.execute(new Write());
-        pool.execute(new Read());
-        pool.execute(new Read());
         pool.execute(new Read());
         pool.shutdown();
     }
